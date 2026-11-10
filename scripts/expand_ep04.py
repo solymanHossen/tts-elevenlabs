@@ -1,0 +1,36 @@
+# Let's write additional turns for EP04
+additional_ep04 = [
+    # After unexpected mishaps, before vocabulary:
+    ("Solu", "Let's also talk about airport English, because many learners tell us that navigating international airports makes their heart pound with anxiety!"),
+    ("Tonu", "Oh, absolutely! The airport environment can feel very intimidating with armed security, strict border control officers, and hundreds of confusing departure signs."),
+    ("Solu", "So let's walk our listeners through a typical airport conversation! Imagine you are approaching the check-in desk at the airline counter. What is the first thing the agent asks?"),
+    ("Tonu", "The agent usually smiles and says, 'Good morning! Where are you flying to today? May I please see your passport and ticket confirmation?'"),
+    ("Solu", "And you hand over your passport and reply, 'Good morning! I am flying to London Heathrow. Here is my passport and booking reference.'"),
+    ("Tonu", "Then the agent asks the classic question about your luggage: 'Are you checking any bags today, or do you only have carry-on luggage?'"),
+    ("Solu", "And if you have a suitcase, you put it on the scale and say, 'I have one checked bag and one carry-on backpack.'"),
+    ("Tonu", "Then comes the big seating preference question: 'Would you prefer a window seat or an aisle seat?' Solu, what is your personal preference on long flights?"),
+    ("Solu", "I am one hundred percent team aisle seat! I like having the freedom to stand up, stretch my legs, and use the restroom without having to tap my neighbor on the shoulder every two hours!"),
+    ("Tonu", "See, I am the exact opposite! I am team window seat all the way. I love leaning my head against the airplane wall to sleep, and watching the clouds and city lights from thirty thousand feet is breathtaking."),
+    ("Solu", "That is the eternal airplane debate: window seat for the views and sleeping, or aisle seat for convenience and legroom!"),
+    ("Tonu", "And then the agent hands you your boarding pass and says, 'Your flight boards at Gate 24B at four-thirty. Boarding will conclude fifteen minutes prior to departure. Have a wonderful flight!'"),
+    ("Solu", "And you smile and say, 'Thank you very much, have a great day!' Practicing these short exchanges in your head before your trip eliminates eighty percent of airport anxiety."),
+    ("Tonu", "Now let's talk about surviving long-haul flights and beating jet lag! Jet lag can completely ruin the first three days of your vacation if you don't manage it."),
+    ("Solu", "Jet lag is that terrible exhaustion when your body's internal circadian clock is still set to your home time zone while the destination clock says it's three in the afternoon!"),
+    ("Tonu", "So what is the secret to beating jet lag, Solu?"),
+    ("Solu", "The moment you step onto the plane, set your watch and phone to the local time of your destination! If it is nighttime at your destination, force yourself to close your eyes and sleep on the plane."),
+    ("Tonu", "And when you land, never take a three-hour nap in the middle of the afternoon, no matter how desperately tired you feel!"),
+    ("Solu", "Yes! Push through until at least nine or ten at night. Go outside into the natural sunlight, walk around, drink plenty of water, and let the sunshine reset your melatonin production."),
+    ("Tonu", "Natural sunlight is the most powerful jet lag remedy known to science. By day two, your body naturally aligns with the new time zone!"),
+    ("Solu", "Another very important travel topic is staying safe and avoiding common tourist scams."),
+    ("Tonu", "Yes! Travelers are often prime targets for petty thieves and scammers because visitors are distracted looking at maps and scenery."),
+    ("Solu", "A classic scam in busy European squares is the friendship bracelet scam, or someone 'accidentally' spilling sauce on your coat so an accomplice can pick your pocket while pretending to help clean it!"),
+    ("Tonu", "Or unmetered taxi drivers outside train stations who quote you five times the normal fare."),
+    ("Solu", "To protect yourself, always research common scams before arriving in a new city. Keep digital copies of your passport and visa stored securely in your email or cloud storage."),
+    ("Tonu", "And wear a cross-body bag or money belt under your shirt when walking through crowded markets or riding busy subways."),
+    ("Solu", "Street smarts and situational awareness keep you safe without making you paranoid. Most people in the world are genuinely kind and helpful!"),
+    ("Tonu", "And finally, let's talk about being a responsible, sustainable traveler."),
+    ("Solu", "Yes! The famous motto: 'Take only memories, leave only footprints.'"),
+    ("Tonu", "Support local economies directly! Eat at family-owned cafes, buy handmade souvenirs from local artisans rather than imported plastic trinkets, and respect sacred cultural or religious sites by dressing appropriately."),
+    ("Solu", "When you treat local cultures with sincere respect and curiosity, the world opens its arms to you in ways you could never imagine.")
+]
+print("Created expansion block with", len(additional_ep04), "turns.")

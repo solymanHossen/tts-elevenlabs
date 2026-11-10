@@ -1,0 +1,187 @@
+#!/usr/bin/env python3
+import gen_common
+
+def build_ep26():
+    turns = [
+        # SECTION 1: WARM WELCOME & HOOK
+        ("Tonu", "Hey hey, lovely listeners! Welcome back to Daily Speak English, your favorite place to improve your English listening and speaking skills. I'm Tonu!"),
+        ("Solu", "And I'm Solu! It is so wonderful to be back with you today for another powerful, practical, and inspiring English session."),
+        ("Tonu", "Solu, have you ever set a massive, exciting goal on a Monday morning—feeling full of passion and fire—only to find that by Thursday afternoon, all that energy has evaporated into thin air?"),
+        ("Solu", "Oh, absolutely, Tonu! That is one of the most universal human struggles. On Monday, you say: 'I am going to wake up at 5:30 AM every day, go to the gym, study English for an hour, and eat only organic vegetables!'"),
+        ("Tonu", "And then Thursday arrives. You had a stressful meeting at work, it is cold and raining outside, you slept poorly, and the warm, soft duvet in your bed feels like heaven!"),
+        ("Solu", "And your brain whispers: 'You worked hard this week; you deserve to sleep in. You can always restart on Monday!' And just like that, the goal dissolves!"),
+        ("Tonu", "And that brings us directly to today's life-changing topic: Building Unshakeable Self-Discipline, Willpower, and Habits That Never Quit!"),
+        ("Solu", "Most people mistakenly believe that successful athletes, CEOs, authors, and polyglots are blessed with some magical, superhuman willpower that ordinary people lack."),
+        ("Tonu", "But cognitive science shows that high achievers don't actually rely on raw willpower; they rely on systems, environment design, and identity-based habits!"),
+        ("Solu", "Today, we are going to reveal the psychology behind discipline, teach you how to overcome procrastination, and give you fantastic everyday English vocabulary to talk about willpower and resilience with complete confidence!"),
+
+        # SECTION 2: MOTIVATION VERSUS DISCIPLINE
+        ("Tonu", "Let's start by defining the fundamental difference between Motivation and Discipline. Solu, why is relying on motivation alone a fatal mistake?"),
+        ("Solu", "Because motivation is purely an emotion, and emotions are inherently fickle, volatile, and temporary!"),
+        ("Tonu", "Motivation is like an emotional fireworks display: it bursts into the night sky with dazzling sparks and excitement, but five seconds later, it burns out, leaving behind only smoke and total darkness."),
+        ("Solu", "If you only practice your spoken English when you 'feel like it', you will never become fluent! If an Olympic swimmer only swam when they felt excited, they would never make the national team."),
+        ("Tonu", "Discipline, on the other hand, is the quiet, steady engine that keeps moving forward even when motivation has packed its bags and left the building!"),
+        ("Solu", "Discipline means doing what you know you must do, even when every fiber of your emotional body is begging to stay on the couch and watch television."),
+        ("Tonu", "And the magnificent paradox is that discipline actually creates true freedom! When you have financial discipline, you gain financial freedom; when you have study discipline, you gain language fluency."),
+        ("Solu", "While undisciplined people are constant slaves to their shifting moods, sudden cravings, and external distractions."),
+        ("Tonu", "As the famous motivational speaker Jim Rohn used to say: 'Discipline is the bridge between goals and accomplishment.'"),
+        ("Solu", "Without that bridge, your goals remain pure fantasy."),
+
+        # SECTION 3: THE MYTH OF HEROIC WILLPOWER & ENVIRONMENT DESIGN
+        ("Tonu", "Now let's explore a fascinating study on self-control. For years, psychologist Roy Baumeister argued that willpower was like a muscle that suffered from 'ego depletion'—meaning you only had a limited amount of willpower each day."),
+        ("Solu", "And while mental fatigue is real, subsequent researchers discovered something even more shocking about people who score highest on self-discipline tests!"),
+        ("Tonu", "What did they discover, Solu?"),
+        ("Solu", "They discovered that 'disciplined' people actually use LESS willpower throughout their day than undisciplined people!"),
+        ("Tonu", "That sounds like a paradox! How can disciplined people use less willpower?"),
+        ("Solu", "Because they don't fight temptation; they ELIMINATE temptation through smart Environment Design!"),
+        ("Tonu", "Aha! That makes so much sense! If you have a bowl of chocolate chip cookies sitting on your desk right next to your computer mouse, your brain has to exert willpower one hundred times an hour to avoid eating a cookie!"),
+        ("Solu", "And eventually, by four in the afternoon when your energy dips, your willpower cracks and you eat the entire bowl!"),
+        ("Tonu", "Whereas, if you simply never buy cookies at the supermarket in the first place, or you put healthy apples on your desk, you require zero willpower to eat healthily!"),
+        ("Solu", "James Clear, author of 'Atomic Habits', summarized it brilliantly: 'Disciplined people are not heroes fighting constant battles; they are architects who design environments where good choices are easy and bad choices are difficult!'"),
+
+        # SECTION 4: THE TWO-MINUTE RULE & ACTIVATION ENERGY
+        ("Solu", "Now, let's talk about overcoming procrastination: The Two-Minute Rule! What is the Two-Minute Rule, Tonu?"),
+        ("Tonu", "The Two-Minute Rule states: when you are starting a new habit, it should take less than two minutes to do!"),
+        ("Solu", "Many people laugh when they hear that! They say: 'How can doing something for two minutes make any difference to my life?'"),
+        ("Tonu", "Because the hardest part of any task is almost always 'Activation Energy'—breaking inertia and getting started!"),
+        ("Solu", "Think about a massive train sitting on the tracks. It takes an immense amount of locomotive force to move the train that first meter."),
+        ("Tonu", "But once the train is rolling, momentum takes over and it requires very little energy to keep cruising at one hundred kilometers an hour!"),
+        ("Solu", "So instead of telling yourself: 'I have to sit down and study English grammar for two grueling hours tonight,' tell yourself: 'I will just open my notebook and read two English sentences.'"),
+        ("Tonu", "Or instead of 'I have to run five kilometers in the cold,' tell yourself: 'I will just put on my running shoes and step outside the front door!'"),
+        ("Solu", "Ninety percent of the time, once you have put on your shoes and stepped outside, you think: 'Well, I am already dressed and outside, I might as well jog around the block!'"),
+        ("Tonu", "Master the art of showing up first. A habit must be established before it can be improved."),
+
+        # SECTION 5: IDENTITY-BASED HABITS
+        ("Solu", "Another profound psychological insight from James Clear is the concept of 'Identity-Based Habits'."),
+        ("Tonu", "Most people try to change their habits by focusing on outcomes: 'I want to lose ten kilograms,' or 'I want to score band eight on the IELTS exam.'"),
+        ("Solu", "And what is wrong with focusing purely on outcomes, Tonu?"),
+        ("Tonu", "Outcome-based habits feel like an external obligation imposed from the outside. But real, lasting behavioral change happens at the level of Identity!"),
+        ("Solu", "Explain the difference with a real example!"),
+        ("Tonu", "Imagine two people trying to quit smoking. Someone offers them a cigarette. The first person says: 'No, thank you, I am trying to quit.'"),
+        ("Solu", "Notice their identity! Deep down, they still believe they are a smoker who is reluctantly depriving themselves of pleasure!"),
+        ("Tonu", "Now look at the second person. When offered a cigarette, they smile and say: 'No, thank you, I am not a smoker.'"),
+        ("Solu", "What a monumental difference! The second person has completely shifted their internal identity. Smoking no longer fits who they believe they are!"),
+        ("Tonu", "Apply this to your English journey right now! Don't tell yourself: 'I am someone who struggles to study English.' Tell yourself: 'I am an English communicator. I am someone who exercises my English voice every single day!'"),
+        ("Solu", "Every action you take is a vote for the type of person you wish to become. When you practice English today, you cast a vote for your communicator identity."),
+
+        # SECTION 6: DELAYED GRATIFICATION & THE MARSHMALLOW TEST
+        ("Tonu", "Let's explore the famous 'Stanford Marshmallow Test' conducted by psychologist Walter Mischel in the 1960s."),
+        ("Solu", "In this legendary experiment, researchers placed a four-year-old child in an empty room, set a single sweet marshmallow on the table in front of them, and made a tantalizing offer!"),
+        ("Tonu", "The researcher said: 'I am going to leave the room for fifteen minutes. You can eat this marshmallow right now if you want. BUT, if you wait until I return without eating it, you will get TWO marshmallows!'"),
+        ("Solu", "Some children grabbed the marshmallow the second the door closed! But other children covered their eyes, sang silly songs, turned their backs, and waited fifteen agonizing minutes to receive the second marshmallow."),
+        ("Tonu", "And when researchers tracked those children for over thirty years into adulthood, the children who demonstrated the ability to delay gratification scored higher on exams, had lower rates of substance abuse, better physical health, and far more successful careers!"),
+        ("Solu", "Delayed gratification is the ultimate superpower. Every great achievement in human history—building wealth, mastering a second language, writing a symphony, running a marathon—requires sacrificing a small pleasure right now for a magnificent reward in the future."),
+
+        # SECTION 7: DAVID GOGGINS & THE 40% RULE
+        ("Tonu", "Solu, have you ever pushed yourself to your physical limit in sports, running, or studying, and felt like your body was about to collapse?"),
+        ("Solu", "Oh, many times! When your legs burn, your lungs ache, and your brain screams: 'Stop! You cannot take another step!'"),
+        ("Tonu", "Former Navy SEAL and ultramarathon runner David Goggins talks about what he calls 'The 40% Rule'."),
+        ("Solu", "What is the 40% Rule, Tonu?"),
+        ("Tonu", "Goggins explains that when your brain screams at you that you are completely exhausted and can't go on, you have actually only tapped into about forty percent of your true physical and mental capacity!"),
+        ("Solu", "Our brains evolved as biological survival mechanisms to conserve energy and protect us from physical danger. So the brain signals exhaustion early as a safety brake!"),
+        ("Tonu", "When you realize that your internal voice of surrender is just a cautious safety governor, you can gently acknowledge the discomfort, breathe through the resistance, and realize you have a reservoir of hidden strength waiting to be unlocked."),
+
+        # SECTION 8: DOPAMINE DETOX & BOREDOM TOLERANCE
+        ("Solu", "Now let's examine the greatest modern enemy of discipline: The Digital Slot Machine in your pocket!"),
+        ("Tonu", "Your smartphone! Neuroscientists have discovered that social media algorithms are engineered using the exact same variable reward schedules as casino slot machines in Las Vegas!"),
+        ("Solu", "Every time you refresh your feed, you don't know if you will get a funny video, an exciting notification, or nothing at all. That unpredictability floods your brain with cheap, synthetic dopamine!"),
+        ("Tonu", "And when your brain becomes saturated with constant, effortless dopamine hits, doing anything that requires sustained effort—like studying English grammar, reading a classic book, or writing a report—feels agonizingly boring!"),
+        ("Solu", "That is why people need to practice what psychologists call 'Boredom Tolerance'!"),
+        ("Tonu", "What is Boredom Tolerance, Solu?"),
+        ("Solu", "Boredom Tolerance is the lost art of simply sitting in a waiting room, standing in line at a supermarket, or riding an elevator without reaching for your phone!"),
+        ("Tonu", "When you allow yourself to experience mild boredom, your dopamine receptors reset. Your mind wanders into creative reflection, and difficult tasks become enjoyable again."),
+
+        # SECTION 9: THE SEINFELD STRATEGY: DON'T BREAK THE CHAIN
+        ("Solu", "Another legendary tool for consistency is called 'The Seinfeld Strategy'!"),
+        ("Tonu", "Created by the world-famous comedian Jerry Seinfeld! How did Seinfeld use this method to become one of the top comedians in history, Solu?"),
+        ("Solu", "When Seinfeld was starting his career, he hung a massive wall calendar in his apartment. His only daily goal was to write one new joke every single day."),
+        ("Tonu", "And each day he wrote a joke, he took a thick red marker and drew a big red 'X' over that date!"),
+        ("Solu", "After a few weeks, that line of red Xs formed a continuous, beautiful chain across the calendar. And Seinfeld said: 'After a few days, your only job in the entire world is: DON'T BREAK THE CHAIN!'"),
+        ("Tonu", "Don't break the chain! There is such deep psychological satisfaction in seeing that visible streak grow longer and longer!"),
+        ("Solu", "You don't have to be brilliant every day; you just have to keep the chain unbroken."),
+
+        # SECTION 10: MEL ROBBINS & THE 5-SECOND RULE
+        ("Tonu", "And what should someone do in that exact moment when hesitation strikes? When the alarm goes off at six in the morning and you want to hit the snooze button?"),
+        ("Solu", "Use author Mel Robbins's famous '5-Second Rule'!"),
+        ("Tonu", "The 5-Second Rule is astonishingly simple: the moment you have an instinct to act on a goal or habit, you must physically move within five seconds, or your brain will kill the idea!"),
+        ("Solu", "Count backwards out loud or in your mind: 5... 4... 3... 2... 1... and physically launch yourself out of bed like a rocket taking off!"),
+        ("Tonu", "Counting backwards interrupts the brain's default worry loops and activates the prefrontal cortex for deliberate physical action. It takes all the emotional debate off the table."),
+
+        # SECTION 11: SLEEP, NUTRITION & THE BIOLOGY OF WILLPOWER
+        ("Solu", "We cannot talk about discipline without honoring our biological hardware: Sleep and Nutrition!"),
+        ("Tonu", "If you sleep four hours a night and eat ultra-processed junk food, your prefrontal cortex is physically impaired! You will feel irritable, impulsive, and unable to resist temptations."),
+        ("Solu", "Self-discipline begins with biological self-respect: getting seven to eight hours of restful sleep, staying hydrated with clean water, and fueling your body with whole foods."),
+
+        # SECTION 12: TEMPTATION BUNDLING & IMPLEMENTATION INTENTIONS
+        ("Tonu", "Now let's share two more brilliant behavioral science hacks: Temptation Bundling and Implementation Intentions!"),
+        ("Solu", "What is 'Temptation Bundling', Tonu? It sounds delicious!"),
+        ("Tonu", "Temptation Bundling was pioneered by Dr. Katy Milkman at the University of Pennsylvania. It means pairing an activity you LOVE with a habit you NEED to do, but tend to procrastinate on!"),
+        ("Solu", "Give us a real-life example of temptation bundling!"),
+        ("Tonu", "Imagine you love listening to a thrilling mystery podcast or an exciting fantasy audiobook, but you dread exercising on an indoor exercise bike! You make an unbreakable deal with yourself: 'I am ONLY allowed to listen to this gripping story while my feet are actively pedaling on the bike!'"),
+        ("Solu", "That is pure psychological genius! You actually start looking forward to your workout because you want to find out who the killer was in chapter eight!"),
+        ("Tonu", "And what about 'Implementation Intentions', Solu?"),
+        ("Solu", "Implementation Intentions were formulated by psychologist Peter Gollwitzer. Instead of setting a vague goal like 'I will practice speaking English more this week,' you write down a precise 'If-Then' formula!"),
+        ("Tonu", "An If-Then formula! Like: 'IF it is 7:30 in the morning and I pour my first cup of hot coffee, THEN I will immediately put on my headphones and speak English for fifteen minutes with Daily Speak English!'"),
+        ("Solu", "When you remove all ambiguity about WHEN, WHERE, and HOW an action takes place, you eliminate decision fatigue and your subconscious brain executes the habit automatically."),
+
+        # SECTION 13: SELF-COMPASSION: NEVER MISS TWICE
+        ("Solu", "Now, let's address what happens when life goes wrong and you break your streak. What happens when someone misses a day of workout or English practice?"),
+        ("Tonu", "Too many people fall into the trap of perfectionism! They have a seven-day streak, they miss on Tuesday, and then they say: 'Oh, I ruined everything! I am a failure with zero discipline!' And they quit for three weeks!"),
+        ("Solu", "Psychologists call that the 'What-The-Hell Effect'! Once you slip up once, you abandon all restraint!"),
+        ("Tonu", "The antidote to the What-The-Hell Effect is the golden rule: 'Never Miss Twice!'"),
+        ("Solu", "Missing once is an accident, a normal human life event! Missing twice is the start of a new, negative habit."),
+        ("Tonu", "If you had a busy day and couldn't practice English on Wednesday, don't beat yourself up with guilt. Just make sure that on Thursday, you show up and speak for five minutes!"),
+        ("Solu", "Forgive yourself quickly, leave shame behind, and get back on the path immediately."),
+
+        # SECTION 9: VOCABULARY & IDIOM SPOTLIGHT (6 KEY IDIOMS)
+        ("Tonu", "Now, let's step into our signature segment: Key Everyday English Vocabulary and Idioms! Today, we have selected six colorful, essential expressions about willpower, perseverance, and discipline."),
+        ("Solu", "Let's master them together! Tonu, what is our very first discipline expression for today?"),
+        ("Tonu", "Our first expression is 'bite the bullet'. To 'bite the bullet' means to bravely face and endure a painful, difficult, or inevitable situation that cannot be avoided."),
+        ("Solu", "Let's listen to a natural conversational example: 'I had been putting off that difficult conversation with my manager for weeks, but yesterday I finally bit the bullet and asked for the promotion.'"),
+        ("Tonu", "That took real courage! What is our second expression, Solu?"),
+        ("Solu", "Our second expression is 'burn the midnight oil'. To 'burn the midnight oil' means to work, study, or labor late into the night with intense dedication."),
+        ("Tonu", "Here is an everyday example: 'During exam week at university, the library was packed with students burning the midnight oil to prepare for their finals.'"),
+        ("Solu", "Brilliant! Tonu, introduce our third expression."),
+        ("Tonu", "Our third expression is 'keep one's eye on the ball'. To 'keep your eye on the ball' means to stay completely focused, attentive, and disciplined on your primary goal, without getting distracted by side issues."),
+        ("Solu", "Let's hear an example: 'Despite unexpected economic downturns, the startup founders kept their eyes on the ball and delivered the software ahead of schedule.'"),
+        ("Tonu", "Great advice! What is our fourth expression, Solu?"),
+        ("Solu", "Our fourth expression is 'weather the storm'. To 'weather the storm' means to successfully endure, survive, and overcome a very difficult, stressful, or dangerous crisis."),
+        ("Tonu", "For example: 'The small family restaurant faced severe losses during the pandemic, but by shifting to delivery, they managed to weather the storm.'"),
+        ("Solu", "Inspiring resilience! Tonu, take us to our fifth expression."),
+        ("Tonu", "Our fifth expression is 'pull oneself together'. To 'pull yourself together' means to regain your emotional composure, calm, and mental control after experiencing severe distress, panic, or grief."),
+        ("Solu", "Here is how you can use it: 'After receiving the shocking news, she took several deep breaths, pulled herself together, and calmly led the emergency team.'"),
+        ("Tonu", "And what is our sixth and final expression for today, Solu?"),
+        ("Solu", "Our sixth expression is 'through thick and thin'. When someone stays committed 'through thick and thin', it means they remain loyal, dedicated, and steadfast through both prosperous and difficult times."),
+        ("Tonu", "Let's hear a lovely example: 'My best friend has supported my dreams through thick and thin for over twenty years; I know I can always rely on him.'"),
+
+        # SECTION 10: INTERACTIVE SPEAKING PRACTICE
+        ("Solu", "Now, it is time for our Interactive Speaking Challenge! This is your turn to speak English out loud along with us. Open your vocal cords, breathe from your diaphragm, and speak with power and clarity!"),
+        ("Tonu", "Sentence number one: 'Discipline is the quiet bridge between your dreams and real-world accomplishment.' Your turn!"),
+        ("Solu", "Say it out loud with warmth and conviction: 'Discipline is the quiet bridge between your dreams and real-world accomplishment.'"),
+        ("Tonu", "Great cadence! Sentence number two: 'Whenever I face a daunting task, I bite the bullet and get started immediately.' Your turn!"),
+        ("Solu", "Repeat with steady confidence: 'Whenever I face a daunting task, I bite the bullet and get started immediately.'"),
+        ("Tonu", "Wonderful! Sentence number three: 'True champions keep their eyes on the ball even when obstacles arise.' Your turn!"),
+        ("Solu", "Speak it clearly: 'True champions keep their eyes on the ball even when obstacles arise.'"),
+        ("Tonu", "Sentence number four: 'Never miss twice; if you stumble today, forgive yourself and show up tomorrow.' Your turn!"),
+        ("Solu", "Let's say sentence number four together: 'Never miss twice; if you stumble today, forgive yourself and show up tomorrow.'"),
+        ("Tonu", "Outstanding work! You are speaking with more rhythm, confidence, and authority with every single session."),
+
+        # SECTION 11: REFLECTION & FAREWELL
+        ("Solu", "And now, it is time for today's Weekly Reflection Question! We want you to practice writing in English down in the comment section below."),
+        ("Tonu", "Here is today's question: 'What is one specific area of your life—whether health, career, reading, or English practice—where building stronger self-discipline would create the biggest positive breakthrough for you? And what two-minute habit will you start today?'"),
+        ("Solu", "Write down your commitment in the comments! Declaring your intention publicly creates positive accountability and sets your subconscious mind in motion."),
+        ("Tonu", "Solu and I read through every single comment, and we will be right there in the comments cheering on your commitment."),
+        ("Solu", "Remember, discipline is not punishment; discipline is self-love. It is honoring the promises you make to yourself when nobody is watching."),
+        ("Tonu", "Keep practicing your English every single day with joy and consistency. Take wonderful care of yourself, and stay strong."),
+        ("Solu", "Until next time, goodbye from Solu!"),
+        ("Tonu", "And goodbye from Tonu!"),
+        ("Both", "Happy learning, stay disciplined, and goodbye!")
+    ]
+    return turns
+
+if __name__ == "__main__":
+    t = build_ep26()
+    gen_common.verify_and_save(26, "scripts/daily_speak_ep26_full.txt",
+                              "Building Unshakeable Self-Discipline & Willpower",
+                              "Daily Speak English | English Listening & Speaking Practice",
+                              t)

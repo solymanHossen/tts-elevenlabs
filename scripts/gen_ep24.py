@@ -1,0 +1,171 @@
+#!/usr/bin/env python3
+import gen_common
+
+def build_ep24():
+    turns = [
+        # SECTION 1: WARM WELCOME & HOOK
+        ("Tonu", "Hey hey, lovely listeners! Welcome back to Daily Speak English, your favorite place to improve your English listening and speaking skills. I'm Tonu!"),
+        ("Solu", "And I'm Solu! We are so excited to bring you another deeply practical, empowering, and fluent English learning episode today."),
+        ("Tonu", "Solu, when you hear the word 'negotiation', what image pops into your head?"),
+        ("Solu", "Most people probably imagine intense corporate executives wearing expensive dark suits, sitting around a mahogany boardroom table on the fiftieth floor of a skyscraper, arguing over billion-dollar contracts!"),
+        ("Tonu", "Exactly! Or they picture political diplomats in Geneva signing international peace treaties! But the truth is, negotiation is something you and I do every single day of our lives."),
+        ("Solu", "That is so true, Tonu! You negotiate when you decide with your spouse what to cook for dinner. You negotiate when you ask your manager for a flexible work schedule or a salary raise."),
+        ("Tonu", "You negotiate when you ask your landlord not to raise your apartment rent, when you buy a second-hand bicycle at a flea market, or when you split cleaning chores with your flatmates!"),
+        ("Solu", "Life is a continuous series of negotiations. And today's topic is: The Art of Everyday Negotiation, Persuasion, and Win-Win Communication!"),
+        ("Tonu", "Many people dread negotiation because they think it means being aggressive, confrontational, rude, or deceitful."),
+        ("Solu", "But the greatest negotiators in the world are not aggressive bullies; they are master listeners who understand human empathy, emotional needs, and creative problem-solving."),
+        ("Tonu", "Today, we are going to unlock the timeless psychology of negotiation, give you real-world scripts and techniques, and teach you fantastic everyday English expressions to help you stand up for your worth with grace and confidence!"),
+        ("Solu", "And the best part is: the more you practice these techniques in small, low-stakes everyday moments, the more natural and effortless they become when big career opportunities arise!"),
+        ("Tonu", "Every conversation is a low-risk practice ground to sharpen your listening, vocal tone, and empathy."),
+
+        # SECTION 2: THE MYTH OF ZERO-SUM VS THE WIN-WIN MINDSET
+        ("Solu", "Let's start by dismantling the single biggest misconception about negotiation: the 'Zero-Sum Fallacy'."),
+        ("Tonu", "The zero-sum mindset assumes that a negotiation is like a pie of fixed size: if I take a bigger slice, you must get a smaller slice! Therefore, in order for me to win, you must lose!"),
+        ("Solu", "And that creates adversarial hostility from the very first minute. Both people become defensive, suspicious, and guarded."),
+        ("Tonu", "In contrast, the legendary Harvard Negotiation Project—founded by William Ury and Roger Fisher in their classic book 'Getting to Yes'—advocates for 'Integrative Bargaining' or expanding the pie!"),
+        ("Solu", "Explain what expanding the pie looks like in everyday life, Tonu."),
+        ("Tonu", "Instead of fighting over a single stubborn number—like price or salary—you look at all the surrounding variables! What does the other person truly value?"),
+        ("Solu", "Yes! Maybe your employer cannot give you a ten thousand dollar cash raise because of strict company-wide budget freezes, but they CAN give you five extra paid vacation days, a monthly learning stipend, or permission to work from home on Mondays and Fridays!"),
+        ("Tonu", "Those perks might cost the company very little money, but they provide immense value, happiness, and freedom to you! That is expanding the pie: creating a win-win outcome where both sides walk away feeling victorious and respected."),
+
+        # SECTION 3: PREPARATION & YOUR BATNA
+        ("Solu", "Now let's talk about the golden secret weapon of every master negotiator: Preparation and BATNA! Tonu, what does that famous acronym BATNA stand for?"),
+        ("Tonu", "BATNA stands for 'Best Alternative to a Negotiated Agreement'. In simple English: what will you do if this negotiation fails and you cannot reach a deal?"),
+        ("Solu", "Your BATNA is the real source of your power! Most people feel terrified during negotiations because they enter the room thinking: 'If they say no, my life is ruined! I have no other choice!'"),
+        ("Tonu", "When you feel desperate, the other side can smell that fear instantly! Desperation forces you to accept unfair terms, low salaries, or bad conditions."),
+        ("Solu", "Whereas, if you take the time BEFORE the negotiation to build a strong alternative—for example, interviewing with another company, having three months of emergency savings in the bank, or researching three alternative apartments to rent—your entire internal posture shifts!"),
+        ("Tonu", "You walk into the room with calm, unshakeable dignity. You are warm, polite, and completely relaxed, because you know deep inside that you have great options even if this specific deal does not work out."),
+        ("Solu", "Having a strong BATNA gives you the most powerful ability in any negotiation: the courage to politely say 'No, thank you' and walk away gracefully."),
+
+        # SECTION 4: TACTICAL EMPATHY & ACTIVE LISTENING
+        ("Tonu", "Now let's explore modern communication psychology, specifically the techniques taught by former FBI hostage negotiator Chris Voss in his brilliant book 'Never Split the Difference'."),
+        ("Solu", "Chris Voss teaches what he calls 'Tactical Empathy'. Many people mistakenly think negotiation is about delivering a brilliant, overwhelming persuasive speech that forces the other person into submission!"),
+        ("Tonu", "Haha! That never works! When you lecture people or push them into a corner, their ego immediately locks down, their ears shut, and they resist you out of stubborn pride."),
+        ("Solu", "Tactical Empathy is the exact opposite: you make the other person feel deeply heard, understood, and validated first."),
+        ("Tonu", "Two of Voss's most famous practical tools are 'Mirroring' and 'Labeling'."),
+        ("Solu", "Let's explain Mirroring first. What is mirroring, Tonu?"),
+        ("Tonu", "Mirroring is delightfully simple yet miraculously powerful: you repeat the last three words—or the most critical one to three words—of what the other person just said, using an inquisitive, upward inflection in your voice!"),
+        ("Solu", "Let's demonstrate that right now! Imagine you are a vendor and you say to me: 'We really want to work with your agency, but the timeline you proposed is just impossible.'"),
+        ("Tonu", "And you would mirror back: 'The timeline is impossible?'"),
+        ("Solu", "Exactly! And by simply repeating those four words with a calm, curious tone, the other person automatically elaborates, reveals their underlying constraints, and explains: 'Well, our design team is tied up until the end of the month, but if we start in July, we could do it!'"),
+        ("Tonu", "You didn't argue, you didn't get angry, you didn't plead. You simply held up a mirror, and they gave you the exact information you needed to solve the problem!"),
+        ("Solu", "And what about 'Labeling', Tonu?"),
+        ("Tonu", "Labeling is giving a name to the other person's unspoken feelings or fears. You use phrases like: 'It sounds like you're concerned about...' or 'It seems like you feel pressured by the deadline...'"),
+        ("Solu", "When you label someone's negative emotion accurately, neuroscience shows that the amygdala—the brain's fear center—immediately calms down! They feel seen and respected."),
+
+        # SECTION 5: CALIBRATED QUESTIONS & THE POWER OF SILENCE
+        ("Solu", "Another genius technique is using 'Calibrated Questions'. Avoid asking aggressive 'Why' questions like: 'Why are you charging so much?' or 'Why can't you deliver on time?'"),
+        ("Tonu", "The word 'Why' often puts people on the defensive, making them feel accused. Instead, ask open-ended questions starting with 'How' or 'What'!"),
+        ("Solu", "For example: 'How are we supposed to make this budget work?' or 'What is the biggest obstacle standing in our way right now?'"),
+        ("Tonu", "That invites the other party to step over to your side of the table and help you solve the problem together."),
+        ("Solu", "And never underestimate the Power of Silence! Amateur negotiators get uncomfortable whenever there is three seconds of silence in a conversation, so they immediately start talking and offering discounts against themselves!"),
+        ("Tonu", "Silence is golden. After you state your proposal or ask a calibrated question, take a deep breath, keep calm eye contact, and remain silent! Let the other person think and speak first."),
+
+        # SECTION 6: ANCHORING BIAS & THE POWER OF THE FIRST NUMBER
+        ("Solu", "Now let's examine a famous cognitive bias studied by Nobel laureates Daniel Kahneman and Amos Tversky: 'Anchoring Bias'!"),
+        ("Tonu", "Anchoring Bias is utterly fascinating, Solu! The human brain has a subconscious tendency to heavily rely on the very first piece of information offered—the 'anchor'—when making decisions or negotiating."),
+        ("Solu", "In a price negotiation, whoever puts out the first realistic number effectively anchors the entire conversation! All counteroffers will mentally orbit around that starting figure."),
+        ("Tonu", "So if you are selling a car and you know it is worth ten thousand dollars, starting your asking price at eleven thousand five hundred anchors the buyer's expectations higher."),
+        ("Solu", "However, what if the other side throws out an absurd, insulting anchor? For example, your landlord says they want to raise your rent by thirty percent!"),
+        ("Tonu", "Never accept an absurd anchor! If you make a counteroffer against a ridiculous anchor, you validate it. Instead, call it out playfully: 'Wow, thirty percent! It sounds like you are preparing to turn this building into a five-star luxury hotel!' Laugh, diffuse the tension, and reset the anchor completely with your own objective market data."),
+
+        # SECTION 7: THE LATE-NIGHT FM DJ VOICE & VOCAL DELIVERY
+        ("Solu", "Let's talk about vocal tone! Chris Voss talks extensively about the 'Late-Night FM DJ Voice'. What is that, Tonu?"),
+        ("Tonu", "The Late-Night FM DJ Voice is deep, slow, calm, and soothing, with a downward inflection at the end of sentences!"),
+        ("Solu", "Demonstrate how that sounds, Tonu!"),
+        ("Tonu", "It sounds like this: 'We want to make this work for you, but we simply cannot commit to that timeline.' Notice how calm, relaxed, and authoritative that feels."),
+        ("Solu", "Yes! It signals that you are completely in control of your emotions. When someone gets aggressive or raises their voice, adopting that deep, calm DJ voice immediately triggers their parasympathetic nervous system and cools down the temperature in the room."),
+        ("Tonu", "In contrast, when amateur negotiators feel nervous, their voice becomes high-pitched, rushed, and ends with an upward question mark, which subconsciously signals insecurity and desperation."),
+
+        # SECTION 8: DISCOVERING BLACK SWANS & HIDDEN LEVERAGE
+        ("Solu", "Now, let's explore what negotiation experts call 'The Black Swan'. What is a Black Swan in a negotiation, Tonu?"),
+        ("Tonu", "A Black Swan is a hidden, unexpected piece of information that, once discovered, completely flips the dynamics and leverage of the entire deal!"),
+        ("Solu", "In every negotiation, there are things you know, things you know you don't know, and things you don't know you don't know! Those hidden unknowns are Black Swans."),
+        ("Tonu", "For example, you might be negotiating to buy a house, and the seller insists on an unusually rigid closing date. You might assume they are just greedy."),
+        ("Solu", "But by asking empathetic, curious questions, you discover their real Black Swan: they have already enrolled their children in a new school in another city that starts on September first, and their greatest fear is paying two mortgages at the same time!"),
+        ("Tonu", "Once you know that hidden motivation, you can offer them a guaranteed, stress-free closing on August twenty-eighth in exchange for a significant discount on the purchase price! You solve their biggest private anxiety, and you get the home of your dreams at a great price."),
+
+        # SECTION 9: EVERYDAY REAL-WORLD SCENARIOS
+        ("Solu", "Now, let's look at three everyday situations our listeners face constantly, and see how to apply these negotiation tools in natural English!"),
+        ("Tonu", "Scenario number one: Negotiating a Salary Raise with your boss!"),
+        ("Solu", "Rule number one: Never ask for a raise based purely on personal financial needs, like: 'My rent went up and I need more money.' Your boss's company is not a charity!"),
+        ("Tonu", "Ask based on the concrete value, results, and revenue you have delivered! Schedule a dedicated meeting and say: 'Over the past year, I took on leading the regional client project and increased our team's delivery speed by twenty percent. I would love to discuss aligning my compensation with this expanded scope.'"),
+        ("Solu", "Notice how professional, objective, and forward-looking that sounds!"),
+        ("Tonu", "Now, Scenario number two: Negotiating rent with your landlord when they propose an increase!"),
+        ("Solu", "Landlords hate tenant turnover because an empty apartment costs them thousands in lost rent, painting, and advertising fees. Leverage your reliability!"),
+        ("Tonu", "You can say: 'I love living in this building, and I have always paid my rent on time and taken great care of the apartment. If we can keep the monthly rent at the current rate, I would be thrilled to sign an extended eighteen-month lease today.'"),
+        ("Solu", "You are offering peace of mind and financial predictability in exchange for price stability—a classic win-win!"),
+        ("Tonu", "And Scenario number three: Dividing household chores with a partner or roommate without resentment!"),
+        ("Solu", "Instead of letting frustration boil over and shouting 'You never wash the dishes!', have a calm Sunday discussion where you trade chores based on personal preferences!"),
+        ("Tonu", "Say: 'I actually don't mind doing the grocery shopping and cooking, but I really dislike vacuuming. Would you be open to taking care of the vacuuming if I handle all the meal preparation?' Simple, clear, and fair."),
+        ("Solu", "And here is a bonus Scenario number four: Negotiating with customer service representatives on your internet or mobile phone bill!"),
+        ("Tonu", "Oh, customer service calls! People usually call angry and aggressive, which makes the agent want to do the absolute bare minimum!"),
+        ("Solu", "Instead, be exceptionally polite and empathetic. Call and say: 'Hello, I have been a loyal customer for three years and I love your service, but my monthly rate just jumped by thirty dollars. As someone on a strict budget, what promotions or loyalty discounts can we apply to keep my bill affordable?'"),
+        ("Tonu", "When you treat the customer service agent like a helpful human ally rather than an enemy, they will happily look for hidden promotions and discount codes to save you hundreds of dollars a year!"),
+
+        # SECTION 10: DEALING WITH ANGRY NEGOTIATORS & THE STRATEGIC PAUSE
+        ("Solu", "Tonu, what should you do when the person sitting across from you is shouting, slamming their fist on the table, or being completely irrational?"),
+        ("Tonu", "The first rule of emotional self-defense is: Never meet fire with fire! If they yell and you yell back, you have given up control and allowed them to dictate your emotional state."),
+        ("Solu", "William Ury calls this 'Stepping to the Balcony'. Imagine you are an actor on a theater stage, but mentally you walk up to the balcony and look down at the stage as a calm observer."),
+        ("Tonu", "You realize: 'Their anger is not really about me; it is an expression of their stress, fear of looking weak, or pressure from their superiors.'"),
+        ("Solu", "And take a strategic pause! You can say calmly: 'I want to resolve this fairly, but I notice emotions are running high. Let's take a ten-minute break, get a glass of water, and come back with fresh minds.'"),
+        ("Tonu", "That de-escalates the tension immediately and allows cooler heads to prevail."),
+
+        # SECTION 11: NEGOTIATING CONFIDENTLY IN ENGLISH AS A SECOND LANGUAGE
+        ("Tonu", "And what advice do we have for our listeners who have to negotiate in English when English is not their native language?"),
+        ("Solu", "First of all: Never apologize for your accent or for taking your time to think! Speaking slowly and deliberately actually makes you sound more authoritative, thoughtful, and composed!"),
+        ("Tonu", "If you don't understand a complex English idiom or term, don't pretend you do. Simply say: 'Could you clarify what you mean by that term so we are completely aligned?' That shows high professionalism."),
+        ("Solu", "And always follow up in writing! Send a polite confirmation email right after the meeting summarizing the key points: 'Thank you for our productive conversation today; here is my understanding of what we agreed upon.' That locks in your gains and prevents future misunderstandings."),
+
+        # SECTION 12: VOCABULARY & IDIOM SPOTLIGHT (6 KEY IDIOMS)
+        ("Tonu", "Now, let's step into our signature segment: Key Everyday English Vocabulary and Idioms! Today, we have selected six colorful, essential expressions used in negotiation, business, and everyday life."),
+        ("Solu", "Let's master them together! Tonu, what is our very first negotiation expression for today?"),
+        ("Tonu", "Our first expression is 'meet someone halfway'. To 'meet someone halfway' means to compromise with someone by making concessions so that both parties reach an agreeable compromise."),
+        ("Solu", "Let's listen to a natural conversational example: 'The seller wanted four hundred dollars and I offered three hundred, but we decided to meet halfway at three hundred and fifty.'"),
+        ("Tonu", "That is a classic compromise. What is our second expression, Solu?"),
+        ("Solu", "Our second expression is 'drive a hard bargain'. When someone 'drives a hard bargain', it means they are an unyielding, tough negotiator who fights hard to obtain the most advantageous terms possible."),
+        ("Tonu", "Here is an everyday example: 'Grandpa drove a hard bargain when buying that antique clock, and he walked away with a fifty percent discount!'"),
+        ("Solu", "Brilliant! Tonu, what is our third expression?"),
+        ("Tonu", "Our third expression is 'sweeten the deal'. To 'sweeten the deal' means to add an attractive extra benefit, discount, or bonus to an existing proposal to persuade the other party to accept it."),
+        ("Solu", "For example: 'The car dealership agreed to sweeten the deal by including two years of free maintenance and a full tank of gas.'"),
+        ("Tonu", "Very enticing! What is our fourth expression, Solu?"),
+        ("Solu", "Our fourth expression is 'stick to one's guns'. To 'stick to your guns' means to firmly maintain your position, principles, or demands despite heavy pressure, criticism, or opposition from others."),
+        ("Tonu", "Let's hear an example: 'Despite the landlord's pressure, Maya stuck to her guns and refused to pay the unauthorized maintenance fee.'"),
+        ("Solu", "Good for Maya! Tonu, introduce our fifth expression."),
+        ("Tonu", "Our fifth expression is 'back down'. To 'back down' means to withdraw a previous demand, admit you were mistaken, or concede defeat in an argument or negotiation."),
+        ("Solu", "Here is how you can use it: 'When we showed the airline their own cancellation policy in black and white, the customer service agent backed down and issued a full refund.'"),
+        ("Tonu", "And what is our sixth and final expression for today, Solu?"),
+        ("Solu", "Our sixth expression is the gold standard of every healthy relationship and business deal: 'win-win situation'. A 'win-win situation' is an arrangement, solution, or outcome where every single person involved benefits and feels satisfied."),
+        ("Tonu", "For example: 'Flexible remote work creates a win-win situation: employees save hours on stressful commuting, while employers save thousands on office overhead.'"),
+
+        # SECTION 8: INTERACTIVE SPEAKING PRACTICE
+        ("Solu", "Now, it is time for our Interactive Speaking Challenge! This is your turn to speak English out loud with us. Breathe deeply, open your chest, and repeat each sentence with natural rhythm and conviction!"),
+        ("Tonu", "Sentence number one: 'We were able to meet halfway and reach a fair agreement that satisfied everyone.' Your turn!"),
+        ("Solu", "Say it out loud with clear pronunciation: 'We were able to meet halfway and reach a fair agreement that satisfied everyone.'"),
+        ("Tonu", "Great cadence! Sentence number two: 'He drove a hard bargain, but both sides walked away feeling respected.' Your turn!"),
+        ("Solu", "Repeat with steady confidence: 'He drove a hard bargain, but both sides walked away feeling respected.'"),
+        ("Tonu", "Wonderful! Sentence number three: 'They offered to sweeten the deal with flexible working hours and extra training.' Your turn!"),
+        ("Solu", "Speak it clearly: 'They offered to sweeten the deal with flexible working hours and extra training.'"),
+        ("Tonu", "Sentence number four: 'The best negotiations are not about dominating the other person, but creating a win-win situation.' Your turn!"),
+        ("Solu", "Let's say sentence number four together: 'The best negotiations are not about dominating the other person, but creating a win-win situation.'"),
+        ("Tonu", "Outstanding work! You are speaking with more authority, fluency, and warmth every single day."),
+
+        # SECTION 9: REFLECTION & FAREWELL
+        ("Solu", "And now, here is today's Weekly Reflection Question! We want you to practice writing in English down in the comment section below."),
+        ("Tonu", "Here is today's question: 'When was the last time you negotiated something in your everyday life—whether it was a price at a market, a task at work, or a chore at home? How did you handle it, and what did you learn?'"),
+        ("Solu", "Did you manage to create a win-win situation, or did you learn a valuable lesson for next time? Share your story with us in the comments!"),
+        ("Tonu", "We read through every single comment, and we love replying to your personal stories and celebrating your English growth."),
+        ("Solu", "Remember that knowing your worth is the foundation of confidence. Stand tall, listen with empathy, and always look for creative solutions that lift everyone up."),
+        ("Tonu", "Keep practicing your English speaking every single day. Take wonderful care of yourself, and have an inspiring day!"),
+        ("Solu", "Until next time, goodbye from Solu!"),
+        ("Tonu", "And goodbye from Tonu!"),
+        ("Both", "Happy learning, negotiate with kindness, and goodbye!")
+    ]
+    return turns
+
+if __name__ == "__main__":
+    t = build_ep24()
+    gen_common.verify_and_save(24, "scripts/daily_speak_ep24_full.txt",
+                              "Negotiation Skills & Persuasion in Everyday Life",
+                              "Daily Speak English | English Listening & Speaking Practice",
+                              t)

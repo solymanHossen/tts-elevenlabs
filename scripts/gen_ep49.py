@@ -1,0 +1,206 @@
+#!/usr/bin/env python3
+"""
+Daily Speak English - Episode 49
+Title: Financial Traps in Your 20s and 30s: Subscriptions, Debt & FOMO
+Requirements:
+- Starts with Tonu: "Hey hey, lovely listeners!..."
+- Words >= 3,550 (strict duration >= 25.5 - 28.0 mins)
+- High-level engaging, natural conversational English
+"""
+
+import gen_common
+
+def build_ep49():
+    turns = [
+        # SECTION 1: MAGNETIC OPENING
+        ("Tonu", "Hey hey, lovely listeners! Welcome back to Daily Speak English, your favorite place to become fluent, confident, and unstoppable in English! I'm Tonu!"),
+        ("Solu", "And I'm Solu! Welcome back, everyone! Today, we are opening up a topic that touches your peace of mind, your freedom, your future family, and your daily sanity: navigating the treacherous Financial Traps of your twenties and thirties—the hidden leakage of subscription creep, high-interest consumer debt, and the toxic psychology of social media FOMO!"),
+        ("Tonu", "Solu, think about how modern money works! In our grandparents' generation, you received physical paper cash in an envelope, put coins into jars, and when the jar was empty, you stopped spending!"),
+        ("Solu", "Yes! Money was tangible, physical, and visceral! But today, money has become completely invisible! You tap a plastic credit card, scan a phone with Apple Pay, click 'Buy Now with 1-Click', and sign up for subscriptions that silently charge your bank account every thirty days!"),
+        ("Tonu", "And millions of intelligent, hard-working professionals in their twenties and thirties make good salaries, yet find themselves living paycheck to paycheck, drowning in credit card balances, and feeling constant financial panic!"),
+        ("Solu", "They say: 'Where did all my money go? I make three times what I made as a college student, but my bank account is perpetually near zero!'"),
+        ("Tonu", "Today, we are going to expose the insidious traps designed by corporations to drain your wealth, analyze Ramit Sethi's 'Conscious Spending' framework, reveal the true magic of compound interest, share how to resist expensive peer pressure, and master practical financial English!"),
+        ("Solu", "Financial freedom is not about being a billionaire with a private yacht; financial freedom is having enough saved so that you can look any bad boss, bad client, or toxic situation in the eye and say: 'I have options, and I walk on my own terms.'"),
+
+        # SECTION 2: THE SUBSCRIPTION CREEP & MICRO-LEAKAGE OF WEALTH
+        ("Tonu", "Let's begin with one of the greatest silent wealth-killers of the twenty-first century: 'Subscription Creep'!"),
+        ("Solu", "Think about what happened to modern consumer products! Ten years ago, you bought software or media once, and you owned it forever!"),
+        ("Tonu", "Today, everything is a recurring monthly subscription! Netflix is fifteen dollars, Spotify is eleven dollars, Disney Plus is fourteen dollars, cloud storage is ten dollars, gym membership is fifty dollars, meal kit delivery is eighty dollars, and premium app subscriptions are five dollars each!"),
+        ("Solu", "A recent consumer study by Chase Bank showed that the average adult estimates they spend about eighty dollars a month on recurring subscriptions."),
+        ("Tonu", "And when researchers audited their actual bank accounts, do you know what the real number was, Solu?"),
+        ("Solu", "Over two hundred and seventy dollars a month! More than THREE TIMES what they thought they were spending!"),
+        ("Tonu", "That is over three thousand two hundred dollars every single year leaking silently through tiny digital pipes!"),
+        ("Solu", "And corporations deliberately make canceling subscriptions a bureaucratic nightmare: hiding the cancel button behind seven menus or requiring you to call a customer service line during business hours!"),
+        ("Tonu", "Conduct a 'Subscription Purge' this weekend! Print out your last three bank statements, take a yellow highlighter, and cancel every single recurring service you haven't used in the past thirty days! You will instantly give yourself an extra two thousand dollars a year!"),
+
+        # SECTION 3: LIFESTYLE INFLATION & THE GOLDEN HANDCUFFS
+        ("Solu", "Now let's examine a psychological trap that keeps high-earners broke: 'Lifestyle Inflation' or 'The Hedonic Treadmill' of Spending!"),
+        ("Tonu", "How many times have you told yourself: 'If I could just get a twenty percent raise, all my financial problems would be solved forever!'"),
+        ("Solu", "And then you get that twenty percent raise! What happens within three months?"),
+        ("Tonu", "Instead of a humble economy apartment, you move into a luxury high-rise with floor-to-ceiling windows! Instead of cooking, you order gourmet food delivery five nights a week! Instead of driving your reliable used car, you lease a brand-new German luxury sedan with an eight-hundred-dollar monthly payment!"),
+        ("Solu", "Within six months, your expenses expand to match your new income dollar for dollar! And suddenly, you feel just as stressed, broke, and trapped as you were when you earned half that amount!"),
+        ("Tonu", "Psychologists call this 'The Hedonic Treadmill'! Human beings adapt to luxury with astonishing speed. What felt like an extravagant luxury on day one becomes an indispensable necessity on day thirty!"),
+        ("Solu", "The secret to real wealth is keeping your lifestyle baseline steady while your income climbs! Save and invest the gap!"),
+
+        # SECTION 4: THE BNPL ILLUSION: 'BUY NOW, PAY LATER'
+        ("Solu", "Let's expose a predatory modern financial trap that targets young shoppers: 'Buy Now, Pay Later' or BNPL apps!"),
+        ("Tonu", "You visit an online clothing or sneaker website, and you see a pair of designer boots for three hundred dollars. You hesitate, knowing you shouldn't spend three hundred dollars."),
+        ("Solu", "And right beneath the price tag, in bold colorful letters, it says: 'Or pay just four easy, interest-free payments of seventy-five dollars with Klarna or Afterpay!'"),
+        ("Tonu", "Your brain's pain-of-paying circuitry is completely deceived! Seventy-five dollars feels like pocket change compared to three hundred dollars!"),
+        ("Solu", "So shoppers buy the boots, buy a jacket on another four-payment plan, buy concert tickets on a third plan, and buy furniture on a fourth plan!"),
+        ("Tonu", "And what happens thirty days later? All four payment plans hit their bank account simultaneously, overdrafting their balance and triggering brutal penalty fees and compounding interest!"),
+        ("Solu", "A Harvard study revealed that over forty percent of BNPL users missed a payment within the first year! If you cannot afford to buy an item with the cash currently sitting in your checking account today, YOU CANNOT AFFORD IT! Period!"),
+
+        # SECTION 5: SOCIAL MEDIA FOMO & THE ILLUSION OF WEALTH
+        ("Tonu", "Let's address the toxic psychological engine driving overspending in your twenties and thirties: Social Media FOMO and 'Keeping Up with the Digital Joneses'!"),
+        ("Solu", "In our parents' generation, you only compared your lifestyle to the five families who lived on your suburban street."),
+        ("Tonu", "Today, you open Instagram, TikTok, or YouTube, and you are comparing your Tuesday morning life to the top 0.001 percent of influencers, trust-fund heirs, and lifestyle marketers across the entire globe!"),
+        ("Solu", "You see twenty-four-year-olds posing on private jets in Dubai, sipping champagne at five-star infinity pools in Bali, wearing eight-thousand-dollar designer watches, and driving sports cars!"),
+        ("Tonu", "And what you cannot see behind those glossy photographs is that eighty percent of those influencers are drowning in credit card debt, renting the designer clothes for three hours, or living in fake sets created to sell you cryptocurrency courses!"),
+        ("Solu", "Spending your hard-earned money to buy luxury items you don't need, to impress people you don't even like, using money you don't have, is pure financial insanity!"),
+        ("Tonu", "Unfollow status-flexing accounts! Real wealth is what you DON'T see: money in investments, paid-off mortgages, stress-free sleep, and independence."),
+
+        # SECTION 6: THE LATENT COST OF CAR FINANCING & STATUS SYMBOLS
+        ("Solu", "Let's examine the single biggest wealth destroyer for people in their twenties and thirties: automobile financing!"),
+        ("Tonu", "An automobile is the most expensive depreciating asset that the average human being will ever purchase!"),
+        ("Solu", "The moment you drive a brand-new car off the dealership lot, it loses ten to twenty percent of its market value within sixty seconds!"),
+        ("Tonu", "And yet, people sign seven-year or eight-year auto loan contracts with seven-hundred-dollar monthly payments, plus two hundred dollars for comprehensive insurance, plus gas, plus parking!"),
+        ("Solu", "That is almost one thousand dollars every single month evaporating on an asset whose sole mechanical purpose is to transport you from Point A to Point B safely!"),
+        ("Tonu", "If you took that same one thousand dollars a month and invested it in a low-cost index fund for ten years, it would grow into over two hundred thousand dollars!"),
+        ("Solu", "Buy a reliable, fuel-efficient used car with cash, drive it for ten years with pride, and let your money compound into real freedom!"),
+
+        # SECTION 7: THE 3-TO-6 MONTH EMERGENCY MOAT: PSYCHOLOGICAL OXYGEN
+        ("Tonu", "Now, let's explore the foundational cornerstone of all financial peace: 'The Emergency Fund' or 'The Freedom Moat'!"),
+        ("Solu", "What is an Emergency Fund, Solu?"),
+        ("Solu", "An emergency fund is three to six months of basic living expenses—rent, groceries, utilities, and medicine—kept in a safe, liquid, high-yield savings account!"),
+        ("Tonu", "Not invested in stocks, not tied up in crypto, but sitting in cash where you can access it within twenty-four hours!"),
+        ("Solu", "Why is an emergency fund so vital, Tonu?"),
+        ("Tonu", "Because life happens! Transmissions fail, roofs leak, teeth crack, companies downsize, and health emergencies arise!"),
+        ("Solu", "If you have zero savings, a single six-hundred-dollar car repair forces you onto high-interest credit cards, starting a vicious debt spiral that takes three years to escape!"),
+        ("Tonu", "But when you have six months of expenses sitting safely in the bank, a crisis is no longer a life-shattering catastrophe; it is merely an annoying logistical inconvenience!"),
+        ("Solu", "An emergency fund is psychological oxygen! It lets you sleep through the night without panic."),
+
+        # SECTION 8: ALBERT EINSTEIN & COMPOUND INTEREST: THE 8TH WONDER
+        ("Solu", "Let's explore the miraculous mathematical engine that builds fortunes: Compound Interest!"),
+        ("Tonu", "Albert Einstein famously declared: 'Compound interest is the eighth wonder of the world. He who understands it, earns it; he who doesn't, pays it!'"),
+        ("Solu", "Explain how compound interest works for our listeners in simple terms, Tonu!"),
+        ("Tonu", "In simple interest, your money earns interest. In compound interest, your money earns interest, and then the INTEREST ITSELF starts earning interest, compounding exponentially like a snowball rolling down a snowy mountain!"),
+        ("Solu", "Let's look at a stunning real-world calculation! Imagine two friends: Sophia and Daniel."),
+        ("Tonu", "Sophia starts investing two hundred dollars a month at age twenty-two, and stops investing at age thirty-two—investing for only ten years, totaling twenty-four thousand dollars, and leaves it to grow at an eight percent average annual return."),
+        ("Solu", "Daniel waits until age thirty-two to start investing! He invests two hundred dollars a month for thirty-three consecutive years until age sixty-five—investing almost eighty thousand dollars!"),
+        ("Tonu", "And who ends up with more wealth at age sixty-five, Solu?"),
+        ("Solu", "Sophia! Even though she invested less than a third of the money that Daniel invested, because her money had an extra ten years to compound, she ends up with significantly more wealth at retirement!"),
+        ("Tonu", "Time in the market beats timing the market every single time! Start investing whatever you have—even twenty dollars a week—today!"),
+
+        # SECTION 9: THE 50/30/20 BUDGETING SYSTEM
+        ("Solu", "Let's share a clean, elegant, and effortless budgeting framework popularized by Harvard professor Elizabeth Warren: 'The 50/30/20 Rule'!"),
+        ("Tonu", "How do you divide your monthly take-home income under the 50/30/20 rule, Solu?"),
+        ("Solu", "Category one: Fifty percent goes to 'Needs'! This is non-negotiable survival: rent, mortgage, groceries, utilities, basic insurance, and minimum debt payments."),
+        ("Tonu", "Category two: Thirty percent goes to 'Wants'! This is life enjoyment: dining out, streaming services, hobbies, vacations, concerts, and shopping!"),
+        ("Solu", "And Category three: Twenty percent goes straight to 'Savings and Debt Payoff'! This is your emergency fund, retirement accounts, and paying down high-interest debt!"),
+        ("Tonu", "When your income arrives, automate that twenty percent first! Treat your savings like a mandatory bill that you pay to your future self before you spend a single dollar on discretionary fun!"),
+
+        # SECTION 10: RAMIT SETHI'S CONSCIOUS SPENDING: SPEND EXTRAVAGANTLY!
+        ("Solu", "Let's finish with an exhilarating financial philosophy from bestselling author Ramit Sethi: 'Conscious Spending'!"),
+        ("Tonu", "Most traditional financial advice is depressing and puritanical: 'Stop drinking five-dollar lattes! Never buy avocado toast! Cut your own hair with scissors!'"),
+        ("Solu", "Ramit Sethi says: That is terrible advice! Cutting lattes won't make you rich, and it makes your daily life miserable!"),
+        ("Tonu", "Instead, adopt Ramit's golden rule: 'Spend extravagantly on the things you truly love, and cut costs mercilessly on the things you don't care about!'"),
+        ("Solu", "If you are obsessed with travel and foreign languages, spend money on great trips and books without an ounce of guilt! But drive an older car, buy second-hand furniture, and don't spend fifty dollars on trendy cocktail bars!"),
+        ("Tonu", "Define what a 'Rich Life' means to YOU personally, not what marketing ads tell you to want. When you align spending with your core values, money becomes a joyful instrument of freedom."),
+
+        # SECTION 11: ASSETS VS LIABILITIES: THE RICH DAD LESSON
+        ("Solu", "Let's examine a foundational financial distinction popularized by author Robert Kiyosaki: the difference between an 'Asset' and a 'Liability'!"),
+        ("Tonu", "Most people think their car, their designer clothes, or their big house are assets!"),
+        ("Solu", "Kiyosaki created the simplest, most brilliant definition in financial history: An asset puts money INTO your pocket! A liability takes money OUT of your pocket!"),
+        ("Tonu", "Your car takes money out of your pocket for insurance, gas, repairs, and depreciation: it is a liability!"),
+        ("Solu", "Your primary house, with mortgage interest, property taxes, maintenance, and utility bills, takes money out of your pocket every single month!"),
+        ("Tonu", "Now, what is a true asset? A diversified index fund that pays you dividends, a rental property that generates monthly cash flow, a small online business, or royalties from creative work!"),
+        ("Solu", "The poor and middle class buy liabilities that they think are assets. The wealthy buy true income-generating assets, and use the cash flow from those assets to pay for their luxuries!"),
+
+        # SECTION 12: THE BIG WINS VS THE LATTE FACTOR
+        ("Tonu", "Let's also dismantle the guilt-ridden myth of the 'Latte Factor'!"),
+        ("Solu", "Traditional financial columnists spend hours yelling at twenty-five-year-olds: 'If you didn't buy that four-dollar coffee every morning, you would be a millionaire!'"),
+        ("Tonu", "That advice is not only mathematically flawed; it creates toxic guilt around tiny everyday pleasures!"),
+        ("Solu", "Focus your mental energy on the 'Big Wins' in life! What are the Big Wins, Tonu?"),
+        ("Tonu", "Big Win number one: Negotiating a seven-thousand or ten-thousand-dollar raise at your job! That single fifteen-minute conversation earns you more than skipping lattes for seven years!"),
+        ("Solu", "Big Win number two: Renting an apartment that is three hundred dollars cheaper per month, or buying a modest car without a massive loan! That saves you four thousand dollars a year in one single decision!"),
+        ("Tonu", "Big Win number three: Automating twenty percent of your paycheck into index funds!"),
+        ("Solu", "Get the three or four Big Wins right, and you can buy your morning coffee with total peace and joy!"),
+
+        # SECTION 13: THE 48-HOUR CART RULE & DOPAMINE CURVES
+        ("Solu", "Let's share a practical neurological hack to crush impulsive online shopping: 'The 48-Hour Cart Rule'!"),
+        ("Tonu", "Neuroscience shows that the dopamine rush does NOT happen when the Amazon package arrives at your front door!"),
+        ("Solu", "The dopamine surge peaks during the hunting and browsing phase: clicking through products, picking colors, and adding them to your digital cart!"),
+        ("Tonu", "Once you click 'Purchase', the dopamine immediately crashes, often replaced by buyer's remorse!"),
+        ("Solu", "Use this to your advantage! Go ahead and browse the website, add everything that catches your eye to your shopping cart, and then: CLOSE THE BROWSER! Do not buy!"),
+        ("Tonu", "Wait forty-eight hours! In eighty-five percent of cases, when you return two days later, the emotional dopamine fever has broken, and you look at the cart and think: 'Why did I even want this? I don't need this at all!'"),
+        ("Solu", "Delete the cart, keep your money, and enjoy the victory over the marketing algorithms!"),
+        ("Tonu", "Delayed gratification is the ultimate financial muscle! Every time you pause and say no to a short-term impulse, you are saying a massive, triumphant YES to your long-term independence."),
+        ("Solu", "It puts you in the driver's seat of your financial destiny, turning you from an impulsive consumer into an intentional architect of your own wealth."),
+
+        # SECTION 14: LIVE ROLEPLAY: DECLINING AN EXPENSIVE PEER-PRESSURE VACATION
+        ("Solu", "Now let's demonstrate a realistic real-world roleplay! Imagine a group of friends is planning an extravagant, five-thousand-dollar luxury weekend trip to a resort, and they pressure you to join."),
+        ("Tonu", "Many people feel ashamed to say no, so they put the entire trip on a credit card and suffer financial misery for two years!"),
+        ("Solu", "Let's demonstrate how someone with financial self-respect declines with total warmth, poise, and dignity! Tonu, play the enthusiastic friend."),
+        ("Tonu", "Hey Solu! We are booking the VIP villa in Cabo for next month! Flights and reservations come out to twenty-five hundred dollars each. Send me your credit card details so we can lock in the booking!"),
+        ("Solu", "Here is the poised, unshakeable response: 'That trip sounds like an absolute dream, Tonu! Thank you so much for including me. However, that doesn't fit into my financial plan and savings goals right now, so I will have to pass on this getaway. But I would love to host a casual barbecue for everyone the weekend before you leave to celebrate the adventure! You guys are going to have a fantastic time!'"),
+        ("Tonu", "Look at the beauty of that response! Zero embarrassment, zero over-explaining, owned their financial plan, celebrated their friends, and offered a fun, low-cost alternative!"),
+        ("Solu", "True friends will respect your financial boundaries, and you will sleep like an infant with zero credit card debt."),
+
+        # SECTION 12: VOCABULARY & IDIOM SPOTLIGHT (6 KEY IDIOMS)
+        ("Tonu", "Now, let's step into our signature segment: Key Everyday English Idioms and Phrases! Today, we have selected six colorful, essential expressions about money, wealth, and spending!"),
+        ("Solu", "Let's master them together! Tonu, what is our very first financial idiom for today?"),
+        ("Tonu", "Our first expression describes major expenses: 'break the bank'. To 'break the bank' means to cost too much money, or exhaust all your financial savings or budget."),
+        ("Solu", "Let's listen to a natural conversational example: 'You don't need to break the bank to have a memorable vacation; camping in a national park is affordable and breathtaking.'"),
+        ("Tonu", "Live well without breaking the bank! What is our second expression, Solu?"),
+        ("Solu", "Our second expression describes the dangerous trap of overspending: 'live beyond one's means'. To 'live beyond your means' means to spend more money than you actually earn, often relying on debt to fund an unsustainable lifestyle."),
+        ("Tonu", "Here is how you can use it: 'By dining at five-star restaurants and leasing luxury cars on a modest salary, Julian was living far beyond his means.'"),
+        ("Solu", "Live below your means, and invest the difference! Tonu, introduce our third idiom."),
+        ("Tonu", "Our third expression describes future security: 'nest egg'. A 'nest egg' refers to a substantial sum of money saved or invested over a long period for a specific future purpose, such as retirement."),
+        ("Solu", "Let's hear an example: 'By contributing diligently to her retirement account every month for thirty years, Clara built an enviable nest egg.'"),
+        ("Tonu", "Protect and nurture your nest egg! What is our fourth expression, Solu?"),
+        ("Solu", "Our fourth expression describes excessive frugality: 'pinch pennies'. To 'pinch pennies' means to be extremely careful, frugal, or reluctant about spending even small amounts of money."),
+        ("Tonu", "For example: 'While pinching pennies on groceries saved a few dollars, focusing on negotiating a salary raise had a much bigger financial impact.'"),
+        ("Solu", "Focus on the big financial levers! Tonu, take us to our fifth idiom."),
+        ("Tonu", "Our fifth expression describes the itch to spend: 'money burns a hole in one's pocket'. When 'money burns a hole in your pocket', it means you have an irresistible urge to spend money quickly as soon as you receive it!"),
+        ("Solu", "Here is an amusing example: 'Whenever Marcus receives his annual bonus, money seems to burn a hole in his pocket and he buys three new gadgets within forty-eight hours.'"),
+        ("Tonu", "And what is our sixth and final expression for today, Solu?"),
+        ("Solu", "Our sixth expression describes something outrageously expensive: 'cost an arm and a leg'. To 'cost an arm and a leg' means to be extremely, exorbitantly expensive."),
+        ("Tonu", "Let's hear an example: 'Replacing the hybrid battery on that vintage luxury car is going to cost an arm and a leg.'"),
+
+        # SECTION 16: INTERACTIVE SPEAKING PRACTICE
+        ("Solu", "Now, it is time for our Interactive Speaking Challenge! This is your turn to speak English out loud along with us. Open your chest, pronounce each syllable with clarity, confidence, and authority, and repeat each sentence with steady cadence!"),
+        ("Tonu", "Sentence number one: 'True wealth is not measured by what you show off, but by the financial freedom you preserve.' Your turn!"),
+        ("Solu", "Speak it out loud with clear cadence: 'True wealth is not measured by what you show off, but by the financial freedom you preserve.'"),
+        ("Tonu", "Beautiful rhythm! Sentence number two: 'Living below your means and building a nest egg gives you lasting peace of mind.' Your turn!"),
+        ("Solu", "Repeat with steady conviction: 'Living below your means and building a nest egg gives you lasting peace of mind.'"),
+        ("Tonu", "Wonderful! Sentence number three: 'You don't need to break the bank to live an extraordinary, meaningful life.' Your turn!"),
+        ("Solu", "Say it clearly: 'You don't need to break the bank to live an extraordinary, meaningful life.'"),
+        ("Tonu", "Sentence number four: 'When you take control of your money, your money becomes a faithful servant of your dreams.' Your turn!"),
+        ("Solu", "Let's say sentence number four together: 'When you take control of your money, your money becomes a faithful servant of your dreams.'"),
+        ("Tonu", "Outstanding work! Notice how grounded, sharp, and financially articulate your spoken English sounds when you speak with conviction!"),
+        ("Solu", "Every sentence you practice out loud strengthens your financial discipline and vocal authority."),
+
+        # SECTION 17: REFLECTION & FAREWELL
+        ("Solu", "And now, it is time for today's Weekly Reflection Question! We want you to practice writing in English down in the comment section below."),
+        ("Tonu", "Here is today's question: 'What is one financial habit or recurring subscription that you are going to audit or cancel this week? What is one thing you love to spend money on consciously, and one area where you choose to cut costs ruthlessly?'"),
+        ("Solu", "Writing your financial commitments in English sharpens your discipline and inspires our global learning community. Share your thoughts in the comments below!"),
+        ("Tonu", "Solu and I read through every single comment, and we are right here celebrating your journey toward financial mastery and English fluency!"),
+        ("Solu", "Taking control of your finances is the greatest act of self-respect and long-term love for your future self."),
+        ("Tonu", "When your money is in order, your mind is free to focus on creativity, family, and deep personal purpose."),
+        ("Solu", "You gain the priceless luxury of time, the ability to say no to what drains you, and the power to build a life of genuine significance."),
+        ("Tonu", "Live with intention, save with discipline, and let your authentic values guide every single financial choice you make."),
+        ("Solu", "Remember: money is simply stored life energy. Respect your energy, spend it with intention, and let it build a life of genuine freedom."),
+        ("Tonu", "Spend wisely, invest boldly, and keep speaking English with radiant joy every single day!"),
+        ("Solu", "Until next time, goodbye from Solu!"),
+        ("Tonu", "And goodbye from Tonu!"),
+        ("Both", "Happy learning, master your money, and goodbye!")
+    ]
+    return turns
+
+if __name__ == "__main__":
+    t = build_ep49()
+    gen_common.verify_and_save(49, "scripts/daily_speak_ep49_full.txt",
+                              "Financial Traps in Your 20s and 30s: Subscriptions, Debt & FOMO",
+                              "Daily Speak English | English Listening & Speaking Practice",
+                              t)

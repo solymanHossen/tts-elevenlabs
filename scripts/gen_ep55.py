@@ -1,0 +1,218 @@
+#!/usr/bin/env python3
+"""
+Daily Speak English - Episode 55
+Title: The Psychology of Nostalgia: The Bittersweet Warmth of Memory
+Requirements:
+- Starts with Tonu: "Hey hey, lovely listeners!..."
+- Words >= 3,550 (strict duration >= 25.5 - 28.0 mins)
+- High-level engaging, natural conversational English
+"""
+
+import gen_common
+
+def build_ep55():
+    turns = [
+        # SECTION 1: MAGNETIC OPENING & THE MAGIC OF MEMORY
+        ("Tonu", "Hey hey, lovely listeners! Welcome back to Daily Speak English, your favorite place to become fluent, confident, and unstoppable in English! I'm Tonu!"),
+        ("Solu", "And I'm Solu! Welcome back, everyone! Today, we are opening the attic door of the human heart, dusting off old photo albums, and exploring one of the most tender, complex, and universal emotional experiences known to humanity: 'The Psychology of Nostalgia, the Bittersweet Warmth of Memory, and the Science of Looking Back'!"),
+        ("Tonu", "Solu, have you ever had this sudden, breathtaking experience: you are walking through a busy street, and suddenly you catch the faint aroma of freshly baked cinnamon bread, or an old song from your high school days plays on the radio in a taxi?"),
+        ("Solu", "Yes! In a split second, the present world evaporates! You are instantly hurled backwards in time: you can feel the autumn breeze of your childhood, you hear your grandmother's laughter, you remember the exact clothes you were wearing, and a wave of warmth—mixed with a gentle ache in your chest—washes over you!"),
+        ("Tonu", "That is the mysterious power of nostalgia! For centuries, doctors and philosophers thought nostalgia was a dangerous psychiatric disease, a form of homesickness that rotted the brain!"),
+        ("Solu", "And today, modern cognitive neuroscience has flipped that view completely upside down!"),
+        ("Tonu", "We now know that nostalgia is not a disease at all; nostalgia is a sophisticated psychological immune system, an evolutionary stabilizer that protects us against loneliness, existential anxiety, and meaninglessness!"),
+        ("Solu", "Today, we are going to explore the Greek origins of nostalgia, examine the groundbreaking research of Dr. Constantine Sedikides at the University of Southampton, unlock Marcel Proust's sensory memory trigger, investigate why Gen Z is nostalgic for eras they never lived through, uncover the trap of 'Golden Age Thinking', and master beautiful English idioms!"),
+        ("Tonu", "As author Peter De Vries humorously observed: 'Nostalgia isn't what it used to be!' Today, let's discover what nostalgia truly is: a bridge between who you were, who you are, and who you are destined to become."),
+
+        # SECTION 2: THE HISTORY OF NOSTALGIA: FROM DISEASE TO ADAPTATION
+        ("Solu", "Let's begin by examining the surprising medical history of the word 'nostalgia'!"),
+        ("Tonu", "Where did the word nostalgia actually come from, Solu?"),
+        ("Solu", "The word was coined in 1688 by a nineteen-year-old Swiss medical student named Johannes Hofer!"),
+        ("Tonu", "Hofer merged two ancient Greek roots: 'nostos', meaning homecoming or return to one's native land, and 'algos', meaning pain, grief, or suffering!"),
+        ("Solu", "So nostalgia literally translated to 'the pain of longing for home'!"),
+        ("Tonu", "And in the seventeenth and eighteenth centuries, it was classified as a severe, potentially fatal medical disease!"),
+        ("Solu", "Swiss mercenary soldiers fighting across Europe fell so violently ill with nostalgia when they heard traditional Swiss mountain cowbell songs—known as the 'Kuhreihen'—that Swiss army officers made playing those songs punishable by death!"),
+        ("Tonu", "Doctors believed soldiers' brain fibers were being damaged by the continuous vibration of mountain air!"),
+        ("Solu", "During the American Civil War, thousands of soldiers were officially treated in military hospitals for clinical nostalgia!"),
+        ("Tonu", "It was treated with leeching, opium, and solitary confinement! It was viewed as a pathetic weakness, a failure to face the present reality."),
+        ("Solu", "It wasn't until the twenty-first century that psychologists began asking: why did natural selection preserve this emotion across all human cultures if it was so pathological?"),
+
+        # SECTION 3: CONSTANTINE SEDIKIDES & THE PSYCHOLOGICAL IMMUNE SYSTEM
+        ("Solu", "Let's examine the pioneering research of Dr. Constantine Sedikides, Professor of Social and Personality Psychology at the University of Southampton!"),
+        ("Tonu", "In the early 2000s, Dr. Sedikides was puzzled by the medical stigma surrounding nostalgia. He launched the Southampton Nostalgia Project to rigorously test what nostalgia actually does to human minds!"),
+        ("Solu", "What did his laboratory experiments reveal, Tonu?"),
+        ("Tonu", "His findings completely revolutionized modern affective science! Dr. Sedikides demonstrated that nostalgia is a vital psychological immune response!"),
+        ("Solu", "When subjects in his laboratory were exposed to feelings of acute loneliness, social isolation, cold physical temperatures, or thoughts of mortality, their brains naturally and instinctively triggered nostalgic memories!"),
+        ("Tonu", "And what happened immediately after experiencing nostalgia?"),
+        ("Solu", "Their mood lifted dramatically! Self-esteem surged, social connectedness deepened, feelings of being loved returned, and existential dread dissipated!"),
+        ("Tonu", "Sedikides discovered that nostalgia acts like an emotional thermostat! When the temperature of your emotional life drops into cold isolation or meaninglessness, your subconscious flips on the furnace of cherished memories to restore psychological homeostasis!"),
+        ("Solu", "Nostalgia is not a retreat into the past; nostalgia is a resource that rescues us in the present."),
+
+        # SECTION 4: THE PROUSTIAN EFFECT & OLFACTORY NEUROSCIENCE
+        ("Solu", "Let's explore the literary and neurological phenomenon known worldwide as 'The Proustian Memory'!"),
+        ("Tonu", "In French novelist Marcel Proust's monumental literary masterpiece 'In Search of Lost Time', the narrator dips a small scalloped sponge cake called a 'madeleine' into a cup of linden tea."),
+        ("Solu", "The moment the warm tea-soaked crumbs touch his palate, an involuntary, euphoric explosion of sensory memory floods his consciousness!"),
+        ("Tonu", "His childhood village of Combray, the old gray house, the cobblestone streets, the flowers in the garden—which had been locked in his subconscious for thirty years—burst back into vivid, three-dimensional reality!"),
+        ("Solu", "Why are taste and SMELL uniquely capable of unlocking raw, unfiltered nostalgic memories?"),
+        ("Tonu", "Because of neuroanatomy! All other sensory signals—vision, hearing, touch—must first travel to the 'Thalamus', the brain's central relay station, where they are filtered and analyzed."),
+        ("Solu", "The olfactory system, which processes smells, completely bypasses the thalamus!"),
+        ("Tonu", "Olfactory nerves travel directly from your nasal passages into the 'Amygdala'—the emotional center of the brain—and the 'Hippocampus'—the master of memory consolidation!"),
+        ("Solu", "That is why a whiff of your mother's perfume, old book pages, or wood smoke can produce an instant emotional rush before your rational mind can even identify the source!"),
+        ("Tonu", "Our senses are secret vaults holding decades of forgotten joy."),
+
+        # SECTION 5: THE REMINISCENCE BUMP: WHY YOUTH MEMORIES SHINE
+        ("Solu", "Have you ever wondered why most people's favorite music, favorite movies, and fondest nostalgic memories come from their teenage years and early twenties?"),
+        ("Tonu", "In cognitive psychology, this is known as 'The Reminiscence Bump'!"),
+        ("Solu", "What is the Reminiscence Bump, Solu?"),
+        ("Solu", "When researchers ask adults over the age of forty to recall the most significant, vivid memories of their lives, there is an enormous statistical peak between the ages of fifteen and twenty-five!"),
+        ("Tonu", "Why are those specific ten years so indelible in human memory?"),
+        ("Solu", "Because that is the period of 'Firsts'! Your first kiss, your first heartbreak, your first car, your first job, your first time living away from home, and the formulation of your foundational identity!"),
+        ("Tonu", "Neurologically, those years are characterized by a surging bath of hormones, dopamine, and heightened synaptic plasticity!"),
+        ("Solu", "The brain stamps those memories with profound emotional salience, weaving them permanently into our autobiographical narrative."),
+        ("Tonu", "That is why you can instantly sing every single lyric of a pop song you heard when you were seventeen, while you can barely remember what you ate for lunch last Thursday!"),
+        ("Solu", "The music of your youth is the soundtrack of your becoming."),
+
+        # SECTION 6: THE BITTERSWEET EMOTIONAL CHEMISTRY
+        ("Solu", "What makes nostalgia feel so uniquely tender compared to pure happiness or pure sorrow?"),
+        ("Tonu", "Nostalgia is defined by its 'Bittersweet' nature! It is a complex, ambivalent emotion that contains two opposing emotional vectors simultaneously!"),
+        ("Solu", "On one hand, there is sweetness and joy: the happiness of remembering a beloved grandparent, a magical summer, or a warm childhood home!"),
+        ("Tonu", "On the other hand, there is bitterness and sorrow: the painful realization that those days are gone forever, that youth has passed, and that those loved ones are no longer here!"),
+        ("Solu", "Neuroimaging shows that nostalgia uniquely co-activates both the brain's reward centers—the ventral striatum—and the sadness and loss circuits!"),
+        ("Tonu", "It is the poetry of human emotion: appreciating the beauty of what was, while weeping gently for its impermanence."),
+        ("Solu", "Bittersweetness reminds us that life is precious precisely because it cannot be kept in a glass jar. The fleeting nature of moments is what gives them infinite value."),
+
+        # SECTION 7: NOSTALGIA AS A SHIELD AGAINST COLD & LONELINESS
+        ("Solu", "Let's explore a remarkable physiological experiment conducted by Dr. Tim Wildschut and his colleagues at the University of Southampton!"),
+        ("Tonu", "They placed participants in cold rooms and measured how nostalgia influenced their physical perception of temperature!"),
+        ("Solu", "What did they discover, Tonu?"),
+        ("Tonu", "Participants who were asked to recall nostalgic memories perceived the room to be significantly WARMER than participants who recalled ordinary, neutral memories!"),
+        ("Solu", "In another test, participants were asked to place their hand in a bucket of ice water! Those actively engaging in nostalgic reflection were able to tolerate the freezing water for twice as long!"),
+        ("Tonu", "Nostalgia produces literal, measurable physical warmth! It increases skin temperature and soothes physical pain!"),
+        ("Solu", "When our ancestors huddled in dark, freezing caves through brutal winters, the shared tribal storytelling of past hunts, warm summers, and ancestral victories kept their spirits—and their physiology—alive!"),
+        ("Tonu", "When the world feels cold and uncaring, your memories are a roaring fireplace inside your soul."),
+
+        # SECTION 8: CULTURAL NOSTALGIA & RETRO OBSESSION
+        ("Solu", "Look at modern entertainment, fashion, and consumer culture! Nostalgia is currently a multi-billion-dollar global economic engine!"),
+        ("Tonu", "Why are Hollywood studios producing endless remakes of 1980s and 1990s films? Why is Netflix's 'Stranger Things' such an unprecedented global sensation?"),
+        ("Solu", "And why are teenagers who were born in 2008 buying 1990s vinyl turntables, Polaroid film cameras, and listening to 1980s analog synthwave music?"),
+        ("Tonu", "This phenomenon has a fascinating name: 'Anemoia'!"),
+        ("Solu", "What is Anemoia, Solu?"),
+        ("Solu", "Anemoia is nostalgia for a time or era you have never actually lived through!"),
+        ("Tonu", "Young people living in an ultra-fast, disorienting digital world saturated with AI, algorithmic notifications, and screen fatigue look at the pre-internet era—the 1980s and 1990s—with profound romantic longing!"),
+        ("Solu", "To them, an era where people rode bicycles without GPS, hung out at shopping malls without smartphones, waited a week for film photos to develop at the pharmacy, and talked for hours on tangled landline phones feels like a mythical golden age of human warmth and authentic connection!"),
+        ("Tonu", "There is a profound human desire for tangible, physical objects that can be touched, held, and collected. When you listen to a vinyl record, you can see the needle tracing the groove; you can smell the cardboard sleeve; you have to flip the disc over after five songs! That tactile ritual anchors the mind in the physical world."),
+        ("Solu", "Retro culture is not just a quirky fashion trend; it is a subconscious cultural rebellion against hyper-digital alienation and disposable digital content."),
+
+        # SECTION 9: THE TRAP OF 'GOLDEN AGE THINKING' & MIDNIGHT IN PARIS
+        ("Solu", "While nostalgia is a healing medicine, like any potent medicine, an overdose can become toxic!"),
+        ("Tonu", "Let's examine the dangerous psychological trap known as 'Golden Age Thinking' or 'Declinism'!"),
+        ("Solu", "In Woody Allen's Oscar-winning film 'Midnight in Paris', a modern writer travels back in time to 1920s Paris, believing that was the true golden era of art and literature with Hemingway and Fitzgerald!"),
+        ("Tonu", "Then he meets a beautiful woman from the 1920s who is desperately unhappy, wishing she could live in the 1890s Belle Époque, which she believes was the true golden age!"),
+        ("Solu", "And the artists of the Belle Époque wished they lived in the Renaissance!"),
+        ("Tonu", "Golden Age Thinking is the romantic delusion that a different era was vastly superior to the one we live in now!"),
+        ("Solu", "When people fall into this trap, they romanticize the past while suffering from historical amnesia!"),
+        ("Tonu", "They forget about past poverty, lack of antibiotics, rampant inequality, and brutal conflicts! They say: 'Oh, back in the good old days, everything was peaceful!'"),
+        ("Solu", "Nostalgia should be used as a comfortable couch to rest on occasionally, never as a house to move into permanently. Your life is happening right now, in the present."),
+
+        # SECTION 10: AUTOBIOGRAPHICAL COHERENCE & THE HERO'S JOURNEY
+        ("Solu", "How does healthy nostalgia help us make sense of our entire life story?"),
+        ("Tonu", "Psychologists call this 'Autobiographical Coherence'—the ability to weave the chaotic, fragmented chapters of your life into a unified, meaningful narrative!"),
+        ("Solu", "Think about your own life journey: you have had painful failures, joyful triumphs, lost friendships, new beginnings, moves across cities, and career shifts."),
+        ("Tonu", "If you look at those events in isolation, life can feel random, senseless, and disorienting!"),
+        ("Solu", "Nostalgia allows you to zoom out and connect the dots! You look back at a crushing heartbreak from ten years ago and realize: 'That heartbreak forced me to discover my inner resilience, which led me to the career I love today!'"),
+        ("Tonu", "You realize that you are the hero of an unfolding epic! The hardships were not meaningless tragedies; they were the character-building plot twists of your growth!"),
+        ("Solu", "Nostalgia bridges your past self with your present self, reminding you: 'You survived every storm before; you will survive this one too.'"),
+
+        # SECTION 11: SOLASTALGIA & ENVIRONMENTAL MEMORY
+        ("Solu", "Let's explore a modern term coined by Australian environmental philosopher Glenn Albrecht: 'Solastalgia'!"),
+        ("Tonu", "What is Solastalgia, Solu?"),
+        ("Solu", "While nostalgia is the homesickness you feel when you are AWAY from home, Solastalgia is the homesickness you feel while you are STILL AT HOME, but your home environment is being transformed or lost around you!"),
+        ("Tonu", "Think of an old neighborhood where the beautiful historic trees have been chopped down for concrete parking lots, or a tranquil rural valley that has been paved over by noisy mega-highways!"),
+        ("Solu", "People feel an acute sense of bereavement and environmental grief as the physical landscapes of their memories vanish!"),
+        ("Tonu", "Recognizing solastalgia reminds us of the sacred value of preserving our natural heritage, our historic neighborhoods, and our communal spaces."),
+
+        # SECTION 12: PRACTICING DELIBERATE NOSTALGIA AS SELF-CARE
+        ("Solu", "How can our lovely listeners practice 'Deliberate Nostalgia' as an intentional self-care tool when feeling anxious, burnt out, or lonely?"),
+        ("Tonu", "Here is a simple, structured four-step ritual you can use to activate nostalgia's healing power! Step one: create an 'Emergency Nostalgia Playlist'!"),
+        ("Solu", "Gather twenty songs from the happiest, most carefree summers of your youth! When corporate work stress or modern anxiety threatens to overwhelm you, put on high-quality headphones, close your eyes, and let those melodies transport you back to carefree times!"),
+        ("Tonu", "Step two: keep a physical 'Keepsake Treasure Box'! Keep an old concert ticket stub, a handwritten postcard from a beloved friend, a dried flower from a wedding, or a smooth pebble from an unforgettable seaside vacation!"),
+        ("Solu", "Holding a physical artifact from a joyous day activates tactile sensory memory, reminding your nervous system that goodness, safety, and deep love are real and tangible!"),
+        ("Tonu", "Step three: practice 'Autobiographical Memory Journaling'! Once a month, sit down with a notebook and write one full page describing a single magical afternoon from your childhood: the smells, the weather, the laughter, and the details!"),
+        ("Solu", "Step four: reach out to an old friend or family member! Send a spontaneous text message: 'Hey, I was just remembering that hilarious afternoon when our tent collapsed in the rain, and I wanted to tell you how much I cherish our friendship.'"),
+        ("Tonu", "Reconnecting with shared memories revitalizes relationships, strengthens mutual belonging, and sparks immediate, contagious joy."),
+
+        # SECTION 13: CREATING FUTURE NOSTALGIA TODAY
+        ("Solu", "Let's share perhaps the most profound realization of today's episode: 'The Creation of Future Nostalgia'!"),
+        ("Tonu", "In the famous finale of the beloved television comedy 'The Office', the character Andy Bernard speaks a line that resonates deeply across the internet: 'I wish there was a way to know you're in the good old days before you've actually left them.'"),
+        ("Solu", "That line pierces right through the human heart! We spend our twenties longing for our teens; we spend our forties longing for our twenties; and we spend our seventies longing for our forties!"),
+        ("Tonu", "What if the good old days are happening RIGHT NOW?"),
+        ("Solu", "The quiet Sunday morning breakfast with your messy kitchen, your child asking a million silly questions, the cup of warm coffee you are drinking right now, the laughter with a friend—these are the exact moments you will yearn for twenty years from today!"),
+        ("Tonu", "Don't wait twenty years to appreciate today! Savor the present moment while it is still unfolding, because today is tomorrow's golden memory."),
+
+        # SECTION 14: REAL-LIFE ROLEPLAY: THE HOMETOWN DINER REUNION
+        ("Solu", "Let's illustrate these principles with a realistic, heartwarming conversational roleplay!"),
+        ("Tonu", "In this scene, I am Chloe, and Solu is Julian. We were inseparable best friends in university who haven't seen each other in twelve years, meeting at our favorite old diner booth. Let's listen!"),
+        ("Solu", "Chloe! Is that really you? Oh, give me a hug! Twelve years, and you still have that exact same radiant smile!"),
+        ("Tonu", "Julian! Look at you! Look at this diner! The red vinyl booths, the jukebox in the corner, the smell of blueberry pancakes! It feels like we walked out of here yesterday afternoon!"),
+        ("Solu", "Look at table number four over there! That is the exact booth where we stayed up until 3:00 AM studying for our final economics exam, fueled by lukewarm diner coffee and panic!"),
+        ("Tonu", "I remember you tried to explain Keynesian fiscal policy using two French fries and a ketchup bottle! I laughed so hard my stomach ached for two days!"),
+        ("Solu", "Chloe, looking back at those years, we were broke, our future was completely uncertain, and we had no clue what we were doing, but we were so rich in laughter and friendship."),
+        ("Tonu", "We really were, Julian. When life gets complicated with mortgages, corporate deadlines, and endless responsibilities, sitting in this booth reminds me of who I truly am at my core."),
+        ("Solu", "That's why I wanted to meet here. No matter how much time passes or how much our titles change, this friendship is home."),
+        ("Tonu", "Julian, to old memories, and to making plenty of new ones today!"),
+        ("Solu", "That roleplay captures the pure essence of nostalgia: anchoring our identity in genuine connection across the passage of time!"),
+
+        # SECTION 15: 6 ESSENTIAL ENGLISH IDIOMS & PHRASAL VERBS
+        ("Tonu", "Now, let's explore six high-level English idioms, expressions, and phrasal verbs connected to memory, time, and the past!"),
+        ("Solu", "Our first idiom is a delightful metaphor for reminiscing: 'a trip down memory lane'. A 'trip down memory lane' refers to an occasion where people recall, discuss, or revisit happy events and memories from the past."),
+        ("Tonu", "Here is a practical example: 'Looking through my high school yearbook with my sister was a wonderful trip down memory lane.'"),
+        ("Solu", "Take a trip down memory lane with someone you love! What is our second expression, Tonu?"),
+        ("Tonu", "Our second idiom describes viewing the past overly favorably: 'through rose-tinted glasses' or 'rose-colored glasses'. To see the past through rose-tinted glasses means to remember only the pleasant, beautiful aspects while ignoring or forgetting the hardships and flaws."),
+        ("Solu", "For example: 'He looks back at his boarding school days through rose-tinted glasses, forgetting how terribly homesick he actually felt.'"),
+        ("Tonu", "Acknowledge the past with balance, not just rose-tinted glasses! What is our third expression, Solu?"),
+        ("Solu", "Our third idiom describes an unexpected encounter with the past: 'a blast from the past'. A 'blast from the past' is something or someone that returns suddenly from your past, bringing back vivid memories."),
+        ("Tonu", "Let's hear an example: 'Hearing that old 90s cassette tape at the garage sale was a total blast from the past!'"),
+        ("Solu", "Embrace those fun blasts from the past! What is our fourth expression, Tonu?"),
+        ("Tonu", "Our fourth idiom describes the impossible wish to reverse time: 'turn back the clock'. To 'turn back the clock' means to return to an earlier time, state, or situation, or to wish that you could relive the past."),
+        ("Solu", "Here is an example: 'We cannot turn back the clock and undo our mistakes, but we can make wiser choices starting today.'"),
+        ("Tonu", "You cannot turn back the clock, but you can seize the future! What is our fifth idiom, Solu?"),
+        ("Solu", "Our fifth idiom describes familiar recognition: 'ring a bell'. When something 'rings a bell', it sounds vaguely familiar or reminds you of something, even if you cannot remember all the specific details."),
+        ("Tonu", "For example: 'Her name rings a bell, but I cannot recall whether we met at the London conference or in Tokyo.'"),
+        ("Solu", "If an English word rings a bell, keep practicing it! And what is our sixth expression, Tonu?"),
+        ("Tonu", "Our sixth idiom describes a period of greatest success: 'in one's heyday'. Someone's 'heyday' is the period of their greatest popularity, vigor, prosperity, or power."),
+        ("Solu", "Let's hear an example: 'In its heyday during the 1920s, this grand seaside resort welcomed royalty and celebrated authors from all over the world.'"),
+
+        # SECTION 16: INTERACTIVE SPEAKING PRACTICE
+        ("Solu", "Now, it is time for our Interactive Speaking Challenge! This is your opportunity to speak English out loud with us. Open your chest, pronounce each syllable with warmth, and repeat each sentence with steady cadence!"),
+        ("Tonu", "Sentence number one: 'Looking through old photographs was a heartwarming trip down memory lane.' Your turn!"),
+        ("Solu", "Speak it with clear articulation: 'Looking through old photographs was a heartwarming trip down memory lane.'"),
+        ("Tonu", "Wonderful! Sentence number two: 'Hearing that song was a total blast from the past that made my day.' Your turn!"),
+        ("Solu", "Repeat with energy: 'Hearing that song was a total blast from the past that made my day.'"),
+        ("Tonu", "Superb! Sentence number three: 'We cannot turn back the clock, so let us cherish the present moment.' Your turn!"),
+        ("Solu", "Say it out loud: 'We cannot turn back the clock, so let us cherish the present moment.'"),
+        ("Tonu", "Sentence number four: 'Her name rings a bell, but I need to see her face to be certain.' Your turn!"),
+        ("Solu", "Let's say sentence number four together: 'Her name rings a bell, but I need to see her face to be certain.'"),
+        ("Tonu", "Brilliant work, lovely listeners! Practicing these expressive idioms out loud cements rich, natural conversational English into your voice."),
+        ("Solu", "And it connects your linguistic fluency with the deepest emotions of the human journey."),
+
+        # SECTION 17: REFLECTION & FAREWELL
+        ("Solu", "And now, it is time for today's Weekly Reflection Question! We want you to practice writing in English down in the comment section below."),
+        ("Tonu", "Here is today's question: 'What is a specific song, smell, or childhood memory that instantly triggers bittersweet nostalgia for you? And what is one ordinary moment happening in your life today that you want to savor as future nostalgia?'"),
+        ("Solu", "Take two minutes to write your answer in English in the comments below. Sharing your memories weaves our global listening community together!"),
+        ("Tonu", "Solu and I read through every single response, and we love traveling down memory lane with each of you!"),
+        ("Solu", "Remember: your past is a treasure chest of wisdom and love, not a cage to keep you captive."),
+        ("Tonu", "Carry the warmth of yesterday in your heart, but step boldly into the sunshine of today."),
+        ("Solu", "Savor the laughter, celebrate your loved ones, and make memories that will warm your soul decades from now."),
+        ("Tonu", "Stand tall, embrace your unique story, and let your authentic light shine."),
+        ("Solu", "Speak with warmth, live with gratitude, and keep practicing your English every single day."),
+        ("Tonu", "Until next time, goodbye from Tonu!"),
+        ("Solu", "And goodbye from Solu!"),
+        ("Both", "Happy learning, cherish your memories, and goodbye!")
+    ]
+    return turns
+
+if __name__ == "__main__":
+    t = build_ep55()
+    gen_common.verify_and_save(55, "scripts/daily_speak_ep55_full.txt",
+                              "The Psychology of Nostalgia: The Bittersweet Warmth of Memory",
+                              "Daily Speak English | English Listening & Speaking Practice",
+                              t)

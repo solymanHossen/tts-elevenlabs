@@ -1,0 +1,213 @@
+#!/usr/bin/env python3
+"""
+Daily Speak English - Episode 52
+Title: The Art of Listening: Hearing What Is Left Unsaid
+Requirements:
+- Starts with Tonu: "Hey hey, lovely listeners!..."
+- Words >= 3,550 (strict duration >= 25.5 - 28.0 mins)
+- High-level engaging, natural conversational English
+"""
+
+import gen_common
+
+def build_ep52():
+    turns = [
+        # SECTION 1: MAGNETIC OPENING & THE LOST ART OF DEEP LISTENING
+        ("Tonu", "Hey hey, lovely listeners! Welcome back to Daily Speak English, your favorite place to become fluent, confident, and unstoppable in English! I'm Tonu!"),
+        ("Solu", "And I'm Solu! Welcome back, everyone! Today, we are exploring one of the most underrated superpowers in human history—a rare skill that repairs fractured relationships, seals multi-million-dollar negotiations, and touches the human soul deeper than any eloquence ever could: 'The Art of Deep Listening: Hearing What Is Left Unsaid'!"),
+        ("Tonu", "Solu, think about how modern society operates! We live in a world saturated with noise, opinions, megaphones, and podcasts! Everyone is desperate to talk, everyone is fighting to broadcast, everyone wants to be the loudest voice in the room!"),
+        ("Solu", "Yes! Society teaches us public speaking, debating, pitch presentations, and persuasive rhetoric. But when was the last time you saw a masterclass or university degree on how to truly, deeply LISTEN to another human being?"),
+        ("Tonu", "Almost never! And yet, Greek philosopher Epictetus observed two thousand years ago: 'We have two ears and one mouth so that we can listen twice as much as we speak!'"),
+        ("Solu", "Most people do not listen with the intent to understand; they listen with the intent to REPLY! While the other person is talking, their internal monologue is frantically rehearsing their own next clever rebuttal, witty story, or unsolicited advice!"),
+        ("Tonu", "And the speaker feels it immediately! They sense that your eyes are glazed over, your mind is racing ahead, and you are merely waiting for them to pause for breath so you can jump in and commandeer the conversation!"),
+        ("Solu", "Today, we are going to explore the neuroscience of acoustic attention, analyze Carl Rogers' transformative active listening framework, explore the subtle art of reading body language and micro-hesitations, master the Japanese concept of 'reading the air', practice empathetic de-escalation, and acquire high-level conversational English vocabulary!"),
+        ("Tonu", "As author David Augsburger profoundly said: 'Being heard is so close to being loved that for the average person, they are almost indistinguishable.' Let's learn how to offer that incredible gift!"),
+
+        # SECTION 2: HEARING VS ACTIVE LISTENING: NEUROSCIENCE
+        ("Solu", "Let's begin by distinguishing the fundamental neurological difference between biological 'hearing' and psychological 'listening'!"),
+        ("Tonu", "Biologically, hearing is passive sensory reception! Acoustic sound waves vibrate your eardrum, travel through the tiny ossicle bones in your middle ear, and trigger electrical impulses along your auditory nerve to your brain's auditory cortex!"),
+        ("Solu", "You can hear background traffic, air conditioning hum, or background chatter without ever devoting conscious cognitive energy to it!"),
+        ("Tonu", "Listening, on the other hand, is an active, intentional, high-bandwidth cognitive investment!"),
+        ("Solu", "Neuroimaging studies reveal that true empathetic listening lights up the prefrontal cortex, the temporal-parietal junction, and mirror neuron networks!"),
+        ("Tonu", "When you listen deeply, your brain is actively decoding syntax, emotional inflection, facial micro-expressions, pacing, breathing patterns, and unspoken contextual history!"),
+        ("Solu", "It requires immense psychological stamina! That is why after an hour of intense, heartfelt listening, you feel physically and emotionally exhausted!"),
+        ("Tonu", "Listening is not passive silence; listening is an act of generous cognitive hospitality, creating a safe sanctuary in your mind where another person's reality can fully unfold."),
+
+        # SECTION 3: NONVERBAL CUES: READING WHAT WORDS CONCEAL
+        ("Solu", "Let's explore the secret dimension of communication: the eighty percent of meaning that never gets articulated into spoken words!"),
+        ("Tonu", "Famed management consultant Peter Drucker famously wrote: 'The most important thing in communication is hearing what isn't said.'"),
+        ("Solu", "What are the nonverbal cues that reveal a speaker's hidden emotional truth, Tonu?"),
+        ("Tonu", "First, consider the 'Vocal Inflection and Cadence'! When someone says 'I'm fine,' does their voice drop into a flat, monotone whisper? Does their pitch rise nervously at the end of the sentence like a question?"),
+        ("Solu", "If someone says 'I'm completely fine' with a clamped jaw and shallow chest breathing, their words say peace, but their nervous system is screaming distress!"),
+        ("Tonu", "Second, look at 'Micro-Hesitations and Pauses'! Notice where a speaker hesitates before answering. When you ask: 'How is the new management treating your department?', and they pause for two full seconds, swallow hard, and look down at their shoes before replying: 'Oh, everything is very organized,' that two-second pause tells the real story!"),
+        ("Solu", "Third, observe 'Eye Contact and Physical Guarding'! Crossed arms, hunched shoulders, stepping backwards, avoiding direct gaze, or nervously twisting a wedding ring!"),
+        ("Tonu", "A master listener does not just process the audio transcript; a master listener observes the entire symphony of nonverbal clues to perceive the unexpressed emotional reality underneath."),
+
+        # SECTION 4: 'KUUKI WO YOMU': THE JAPANESE ART OF READING THE AIR
+        ("Solu", "Let's travel to Japan to study a profound cultural concept that elevates listening into a high art form: 'Kuuki wo Yomu', which translates literally to 'Reading the Air'!"),
+        ("Tonu", "In Japanese society, interpersonal harmony, subtlety, and respect are paramount. Direct confrontation or blunt verbal demands are often viewed as harsh, clumsy, and disruptive."),
+        ("Solu", "Therefore, people communicate enormous amounts of critical information through atmospheric subtlety, delicate nuance, and unspoken cues!"),
+        ("Tonu", "If someone is 'KY'—an abbreviation in Japan for 'Kuuki ga Yomenai', meaning someone who CANNOT read the air—they barge into rooms, miss delicate social signals, dominate conversations, and make everyone uncomfortable!"),
+        ("Solu", "Reading the air means entering a room and instantly sensing the prevailing mood, recognizing when someone is overwhelmed without them having to ask for help, and respecting delicate conversational boundaries!"),
+        ("Tonu", "In English, we say 'reading between the lines' or 'taking the temperature of the room.' It is the ability to perceive emotional atmospheric pressure before a single word of conflict is spoken!"),
+        ("Solu", "Developing this sensitivity transforms your international professional career and personal friendships because people feel protected and understood in your presence."),
+
+        # SECTION 5: CARL ROGERS & PERSON-CENTERED EMPATHIC LISTENING
+        ("Solu", "Let's examine the legendary work of Dr. Carl Rogers, the father of humanistic psychology and the pioneer of 'Person-Centered Active Listening'!"),
+        ("Tonu", "In the mid-twentieth century, psychotherapy was dominated by authoritarian psychoanalysts who sat back, judged patients, and prescribed clinical diagnoses."),
+        ("Solu", "Dr. Rogers revolutionized mental healthcare by introducing three core conditions for psychological healing: Unconditional Positive Regard, Congruence, and Empathic Understanding!"),
+        ("Tonu", "What does Rogers mean by Empathic Understanding, Solu?"),
+        ("Solu", "It means sensing the client's private world to such a degree that you can clarify feelings of which the speaker themselves is barely aware!"),
+        ("Tonu", "Rogers demonstrated that when a human being feels completely heard without judgment, without being told 'cheer up,' and without receiving unsolicited advice, their psychological defenses drop!"),
+        ("Solu", "They stop pretending, they stop posturing, and their inner emotional knot naturally begins to untangle!"),
+        ("Tonu", "When your spouse, friend, or coworker comes to you with pain, your job is NOT to play amateur therapist or solve their life in five minutes! Your job is to be a clear mirror, reflecting back their worth and presence."),
+
+        # SECTION 6: THE TRAP OF 'WAITING TO SPEAK' VS TRUE PRESENCE
+        ("Solu", "Let's analyze the most common bad listening habit on the planet: 'The Rehearsal Trap' or 'Waiting to Speak'!"),
+        ("Tonu", "Be honest with yourself, lovely listeners! How often do you find yourself doing this: your colleague starts telling a story about their trip to Italy, and five seconds in, your brain screams: 'Oh! That reminds me of the time I went to Rome and lost my luggage!'"),
+        ("Solu", "And from that exact second onwards, you stop hearing their story! You are sitting on the edge of your seat, waiting for them to finish talking so you can hijack the spotlight and tell YOUR luggage story!"),
+        ("Tonu", "This conversational hijacking is known in communication psychology as 'Shift-Responses' versus 'Support-Responses'!"),
+        ("Solu", "Sociologist Charles Derber studied conversational narcissism and discovered that people constantly use Shift-Responses to redirect attention back to themselves!"),
+        ("Tonu", "If someone says: 'I've been feeling so overwhelmed with project deadlines lately,' a Shift-Response says: 'Tell me about it! My manager gave me three new accounts yesterday!'"),
+        ("Solu", "Whereas a Support-Response keeps the spotlight firmly on the other person: 'That sounds exhausting. What part of the deadline is weighing on you most heavily?'"),
+        ("Tonu", "Catch yourself when you want to shift the spotlight! Resist the urge to compare scars, resist the urge to tell your story, and stay curious about their experience."),
+
+        # SECTION 7: ASKING POWERFUL OPEN-ENDED QUESTIONS
+        ("Solu", "One of the most effective tools for unlocking deep listening is mastering the art of the 'Open-Ended Inquiry'."),
+        ("Tonu", "What is the difference between a closed question and a powerful open-ended question, Solu?"),
+        ("Solu", "A closed question can be answered with a blunt 'yes', 'no', or a single factual word. For example: 'Did you like the conference?' Answer: 'Yes.' Conversation dead!"),
+        ("Tonu", "An open-ended question, however, invites exploration, vulnerability, and narrative reflection!"),
+        ("Solu", "Instead of asking: 'Did you like the conference?', ask: 'What was the single most surprising insight that challenged your thinking at the conference today?'"),
+        ("Tonu", "Instead of asking your partner: 'Did you have a good day?', ask: 'What was the most energizing moment of your day today, and what drained you?'"),
+        ("Solu", "Notice how questions that begin with 'What' or 'How' open up expansive psychological landscapes, whereas questions that begin with 'Why' can sometimes sound accusatory!"),
+        ("Tonu", "If you ask: 'Why did you make that choice?', people feel defensive, as if they are on trial!"),
+        ("Solu", "If you reframe it gently: 'What were the key factors that led you to that decision?', they feel invited to share their thought process collaboratively!"),
+        ("Tonu", "Great questions are the keys that unlock doors in other people's minds."),
+
+        # SECTION 8: LISTENING IN THE WORKPLACE & PSYCHOLOGICAL SAFETY
+        ("Solu", "Let's explore how active listening determines leadership success, team performance, and corporate culture in the modern workplace!"),
+        ("Tonu", "Harvard Business School professor Amy Edmondson conducted famous research on high-performing teams, discovering the primary differentiator: 'Psychological Safety'!"),
+        ("Solu", "Psychological safety is the shared belief that a team is safe for interpersonal risk-taking, where no one will be humiliated or penalized for asking questions, admitting mistakes, or voicing dissenting ideas!"),
+        ("Tonu", "And how is psychological safety built by managers and executives? Through LISTENING!"),
+        ("Solu", "When an employee approaches a manager with bad news—for example, a software glitch or supply chain delay—and the manager listens calmly, acknowledges the issue without exploding, and asks: 'Thank you for flagging this early. How can we tackle this together?', trust flourishes!"),
+        ("Tonu", "Conversely, if a leader interrupts, rolls their eyes, shoots the messenger, or checks their smartphone during presentations, employees shut down!"),
+        ("Solu", "They stop bringing warnings, they hide defects, and eventually, the organization suffers catastrophic blind-spot failures!"),
+        ("Tonu", "Exceptional leaders listen to the frontline employees, the junior engineers, and the quietest voices in the room, because that is where the unvarnished truth lives."),
+
+        # SECTION 9: THE POWER OF SILENCE & THE 5-SECOND RULE
+        ("Solu", "Let's discuss one of the most terrifying yet potent tools in spoken communication: 'The Deliberate Pause' and the 5-Second Rule!"),
+        ("Tonu", "In modern conversations, silence feels uncomfortable. The moment there is a two-second pause, people panic! They rush to fill the void with meaningless chatter, nervous jokes, or filler words!"),
+        ("Solu", "In investigative journalism, clinical psychotherapy, and elite hostage negotiation, silence is treated as a strategic instrument of revelation!"),
+        ("Tonu", "When another person finishes speaking, don't jump in immediately! Count to three or five in your head while maintaining warm, attentive eye contact."),
+        ("Solu", "What happens in those few seconds, Tonu?"),
+        ("Tonu", "The speaker will almost always continue! They will take a deeper breath and say: '...And you know what the real truth is? The reason I'm so upset isn't the project; it's that I feel unappreciated by the leadership.'"),
+        ("Solu", "Their first statement was merely the surface crust; the golden vulnerability only comes out during the silence that follows!"),
+        ("Tonu", "Silence creates psychological space. Don't rush to fill it; let the stillness do the heavy lifting."),
+
+        # SECTION 10: EMPATHETIC DE-ESCALATION: LISTENING TO ANGER
+        ("Solu", "What should you do when someone is yelling, furious, unreasonable, or emotionally flooded?"),
+        ("Tonu", "When someone is gripped by an amygdala hijack, your instinct is to defend yourself: 'Calm down! Stop shouting! You are being totally irrational!'"),
+        ("Solu", "Does telling an angry person to 'calm down' EVER calm them down in the history of humanity?"),
+        ("Tonu", "NEVER! It acts like throwing aviation kerosene onto a roaring bonfire! It invalidates their emotional reality and doubles their rage!"),
+        ("Solu", "Chris Voss, former lead international kidnapping negotiator for the FBI, teaches the technique of 'Tactical Empathy' and 'Emotional Labeling'!"),
+        ("Tonu", "Instead of arguing with their logic, listen to their emotion and label it softly: 'It sounds like you feel completely abandoned by this department and betrayed by the timeline.'"),
+        ("Solu", "Notice the phrase: 'It sounds like...' or 'It seems like...' It shows you are listening without admitting legal fault or agreeing with irrational facts!"),
+        ("Tonu", "When an enraged human feels genuinely acknowledged, their amygdala cools down, their prefrontal cortex reactivates, and rational problem-solving becomes possible!"),
+        ("Solu", "You cannot reason with an inflamed heart until you have listened to its pain."),
+
+        # SECTION 11: CULTURAL NUANCES: HIGH-CONTEXT VS LOW-CONTEXT
+        ("Solu", "Let's examine how listening styles vary dramatically across different cultures and languages!"),
+        ("Tonu", "Anthropologist Edward T. Hall introduced the classic framework of 'High-Context' versus 'Low-Context' cultures!"),
+        ("Solu", "In Low-Context cultures, like the United States, Germany, the Netherlands, and Canada, communication is explicit, direct, and literal!"),
+        ("Tonu", "People say exactly what they mean: 'Yes means yes, no means no.' If something is not in the contract or written email, it does not exist!"),
+        ("Solu", "In High-Context cultures, such as Japan, China, Arab nations, India, and much of Latin America, communication is layered with contextual subtlety, hierarchy, relational history, and shared unspoken codes!"),
+        ("Tonu", "In a high-context business meeting, a polite 'That might be quite challenging to implement' rarely means 'let's try hard'; it often means a firm, diplomatic 'NO' designed to preserve your dignity!"),
+        ("Solu", "If you listen only to the literal words in high-context communication, you will blunder into embarrassing misunderstandings!"),
+        ("Tonu", "Adapt your listening antennae to the cultural context of the speaker, tuning into the cultural frequency of nuance and respect."),
+
+        # SECTION 12: LISTENING TO YOURSELF: INTUITION & INTERNAL SIGNALS
+        ("Solu", "Before you can become a great listener to other people, you must develop the courage to listen to the most important person in your life: YOURSELF!"),
+        ("Tonu", "How often do we suppress our own internal voice? Our gut intuition warns us: 'This business partnership feels unethical,' or 'This relationship is draining your spirit,' or 'Your body needs rest before you collapse.'"),
+        ("Solu", "And yet, we drown out that quiet intuitive voice with constant phone notifications, Netflix binges, caffeine, and endless busyness!"),
+        ("Tonu", "Your body is constantly communicating with you through somatic signals: tension headaches, a clenched stomach, shallow breathing, chronic exhaustion!"),
+        ("Solu", "Those physical symptoms are your body's unread text messages! If you ignore the whisper, your body will eventually scream in the form of burnout or illness!"),
+        ("Tonu", "Take ten minutes of silence every morning. Put down the phone, close your eyes, and listen to the quiet, steady wisdom of your own soul."),
+
+        # SECTION 13: PRACTICAL DAILY EXERCISES FOR LISTENING STAMINA
+        ("Solu", "Let's outline three actionable, daily exercises you can start practicing today to train your active listening muscles!"),
+        ("Tonu", "Exercise number one: 'The One-Conversation Rule'! During your next coffee with a friend or colleague, commit to not mentioning yourself, your accomplishments, or your problems for the first fifteen minutes!"),
+        ("Solu", "Keep the spotlight entirely on them! Ask follow-up questions, summarize their feelings, and notice how deeply they open up!"),
+        ("Tonu", "Exercise number two: 'The Paraphrase Check'! Before you offer any opinion or answer, paraphrase what you just heard in your own words: 'So what I'm hearing is that you are feeling torn between stability and adventure. Is that right?'"),
+        ("Solu", "This ensures you haven't misunderstood their point, and it gives the speaker the rare thrill of feeling truly registered!"),
+        ("Tonu", "Exercise number three: 'Audio-Only Immersion'! Listen to a podcast episode or audio story with your eyes closed, focusing entirely on cadence, breath sounds, emotion, and nuance without visual distractions."),
+        ("Solu", "These micro-habits compound over weeks, turning you into a magnetic conversationalist whom everyone loves talking to."),
+
+        # SECTION 14: REAL-LIFE ROLEPLAY: THE OVERLOOKED FRIEND
+        ("Solu", "Let's bring these principles to life with a realistic conversational roleplay!"),
+        ("Tonu", "In this scene, I am Maya, an exhausted professional who has been dealing with quiet family stress, and Solu is Alex, an observant, empathetic friend meeting for tea. Let's see how deep listening uncovers the truth!"),
+        ("Solu", "Maya, it is so good to see you! You've been running between client meetings all week. How are you holding up beneath all that bustle?"),
+        ("Tonu", "Oh, you know me, Alex! Always on the go. Everything is fine, just busy with the quarterly targets and life."),
+        ("Solu", "Maya, I hear you saying 'everything is fine,' but your shoulders look carrying a heavy weight, and you've sighed three times since sitting down. What is the real story that work is covering up?"),
+        ("Tonu", "Is it that obvious? Honestly, Alex... it's my mother's health. We received test results on Tuesday, and while everyone at the office expects me to be laser-focused on presentations, my heart is sitting in a hospital waiting room."),
+        ("Solu", "Oh, Maya. I am so deeply sorry. That must feel incredibly lonely, carrying that terrifying uncertainty while putting on a smiling face for coworkers."),
+        ("Tonu", "It feels like I'm living two parallel lives, and I feel guilty every minute I'm not with her."),
+        ("Solu", "Of course you do. That guilt proves how deeply you love her. Drink your tea, Maya. You don't have to be strong or professional here with me. I'm all ears, and we have all the time in the world."),
+        ("Tonu", "Thank you, Alex. You have no idea how much it means just to breathe and speak without having to defend my feelings."),
+        ("Solu", "Notice what happened in that roleplay! Alex didn't accept the superficial brush-off 'I'm fine'; he observed the nonverbal cues, offered a safe container, validated the emotion, and offered unhurried presence."),
+
+        # SECTION 15: 6 ESSENTIAL ENGLISH IDIOMS & PHRASAL VERBS
+        ("Tonu", "Now, let's explore six high-level English idioms, expressions, and phrasal verbs connected to listening, empathy, and communication!"),
+        ("Solu", "Our first idiom is iconic: 'read between the lines'. To 'read between the lines' means to understand the hidden, implicit meaning in what someone says or writes, rather than just taking their literal words at face value."),
+        ("Tonu", "Here is a practical example: 'His email said the company was restructuring, but if you read between the lines, layoffs are coming next month.'"),
+        ("Solu", "Always read between the lines in sensitive negotiations! What is our second expression, Tonu?"),
+        ("Tonu", "Our second idiom conveys complete, eager attention: 'all ears'. When someone says 'I'm all ears,' it means they are fully focused, listening with undivided attention, and ready to hear whatever you have to share."),
+        ("Solu", "For example: 'Tell me about your innovative startup idea; I've closed my laptop, put away my phone, and I'm all ears!'"),
+        ("Tonu", "Be all ears when someone entrusts you with their story! What is our third expression, Solu?"),
+        ("Solu", "Our third phrasal verb is essential for resolving conflicts: 'hear someone out'. To 'hear someone out' means to listen patiently to someone until they have finished explaining their viewpoint, without interrupting or dismissing them prematurely."),
+        ("Tonu", "Let's hear an example: 'I know you disagree with my proposal, but please hear me out before you make your final decision.'"),
+        ("Solu", "Give people the courtesy to hear them out! What is our fourth expression, Tonu?"),
+        ("Tonu", "Our fourth phrasal verb describes losing mental focus: 'tune out'. To 'tune out' means to stop paying attention to someone who is speaking, often because you are bored, tired, or lost in your own thoughts."),
+        ("Solu", "Here is an example: 'During the two-hour lecture on corporate tax legislation, half the audience began to tune out and daydream.'"),
+        ("Tonu", "Don't tune out when important relationships are at stake! What is our fifth idiom, Solu?"),
+        ("Solu", "Our fifth idiom describes deep emotional resonance: 'strike a chord'. When something 'strikes a chord', it evokes a strong, sympathetic emotional reaction or reminds someone of their own personal experience."),
+        ("Tonu", "For example: 'Her honest speech about struggling with imposter syndrome struck a chord with hundreds of young professionals in the auditorium.'"),
+        ("Solu", "Your words strike a chord when they speak to authentic human truth! And what is our sixth expression, Tonu?"),
+        ("Tonu", "Our sixth idiom describes spellbound fascination: 'hang on every word'. To 'hang on someone's every word' means to listen to someone with total, breathless fascination and admiration."),
+        ("Solu", "Let's hear an example: 'The legendary explorer recounted his expedition through the Amazon rainforest, and the students hung on his every word.'"),
+
+        # SECTION 16: INTERACTIVE SPEAKING PRACTICE
+        ("Solu", "Now, it is time for our Interactive Speaking Challenge! This is your opportunity to speak English out loud with us. Stand tall, relax your vocal cords, and repeat each sentence with steady clarity and emotional warmth!"),
+        ("Tonu", "Sentence number one: 'True listening is an act of generous presence, hearing what words often conceal.' Your turn!"),
+        ("Solu", "Repeat with clear articulation: 'True listening is an act of generous presence, hearing what words often conceal.'"),
+        ("Tonu", "Superb! Sentence number two: 'I'm all ears; please hear me out so we can find common ground.' Your turn!"),
+        ("Solu", "Speak it with confidence: 'I'm all ears; please hear me out so we can find common ground.'"),
+        ("Tonu", "Excellent cadence! Sentence number three: 'When we read between the lines, we honor the subtle emotions of others.' Your turn!"),
+        ("Solu", "Say it out loud: 'When we read between the lines, we honor the subtle emotions of others.'"),
+        ("Tonu", "Sentence number four: 'Her vulnerability struck a chord that united the entire community.' Your turn!"),
+        ("Solu", "Let's say sentence number four together: 'Her vulnerability struck a chord that united the entire community.'"),
+        ("Tonu", "Tremendous work, lovely listeners! Speaking these powerful sentences out loud trains your brain for effortless, natural conversational mastery."),
+        ("Solu", "And it embeds the spirit of deep empathetic connection into every conversation you have."),
+
+        # SECTION 17: REFLECTION & FAREWELL
+        ("Solu", "And now, it is time for today's Weekly Reflection Question! We want you to practice writing in English down in the comment section below."),
+        ("Tonu", "Here is today's question: 'Think of someone in your life who is a truly extraordinary listener. What do they do that makes you feel so heard and valued? And who in your life needs your undivided, attentive ear this week?'"),
+        ("Solu", "Take two minutes to write your answer in English in the comments below. Reading and writing cements your vocabulary and connects you with our vibrant global community!"),
+        ("Tonu", "Solu and I read through every single response, and we love witnessing your weekly growth and courage!"),
+        ("Solu", "Remember: eloquence may dazzle the mind, but deep listening captures the human heart."),
+        ("Tonu", "Give someone the priceless gift of your complete attention today."),
+        ("Solu", "Put down your phone, look into their eyes, and listen with all your heart."),
+        ("Tonu", "You have the power to make others feel seen, respected, and deeply loved."),
+        ("Solu", "Speak with wisdom, listen with empathy, and keep expanding your English confidence every single day."),
+        ("Tonu", "Until next time, goodbye from Tonu!"),
+        ("Solu", "And goodbye from Solu!"),
+        ("Both", "Happy learning, keep listening with heart, and goodbye!")
+    ]
+    return turns
+
+if __name__ == "__main__":
+    t = build_ep52()
+    gen_common.verify_and_save(52, "scripts/daily_speak_ep52_full.txt",
+                              "The Art of Listening: Hearing What Is Left Unsaid",
+                              "Daily Speak English | English Listening & Speaking Practice",
+                              t)
+

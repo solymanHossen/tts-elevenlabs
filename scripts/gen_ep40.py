@@ -1,0 +1,207 @@
+#!/usr/bin/env python3
+"""
+Daily Speak English - Episode 40
+Title: Curiosity, Lifelong Questioning & The Beginner's Mind
+Requirements:
+- Starts with Tonu: "Hey hey, lovely listeners!..."
+- Words >= 3,550 (strict duration >= 25.5 - 28.0 mins)
+- High-level engaging, natural conversational English
+"""
+
+import gen_common
+
+def build_ep40():
+    turns = [
+        # SECTION 1: MAGNETIC OPENING
+        ("Tonu", "Hey hey, lovely listeners! Welcome back to Daily Speak English, your favorite place to become fluent, confident, and unstoppable in English! I'm Tonu!"),
+        ("Solu", "And I'm Solu! Welcome back to our milestone fortieth episode of Daily Speak English! Today, we are celebrating a profound intellectual superpower that keeps your mind youthful, creative, agile, and eternally vibrant: the art of insatiable curiosity, lifelong questioning, and the ancient Zen philosophy of the 'Beginner's Mind'!"),
+        ("Tonu", "Solu, did you know that child psychologists have tracked that an average four-year-old child asks between two hundred and three hundred questions every single day?"),
+        ("Solu", "Three hundred questions a day! 'Why is the sky blue? Why do birds have feathers? Where does the sun go at night? Why do dogs bark? What makes water wet?' Their little eyes are wide with awe, looking at the world as an enchanting mystery waiting to be unraveled!"),
+        ("Tonu", "And then, what happens as we grow up through standardized schooling and corporate life? By the time people reach adulthood, that fountain of questions slows to a trickle! Most adults rarely ask genuine questions anymore; instead, they pretend they already know everything!"),
+        ("Solu", "We trade the wonder of the explorer for the rigid armor of the 'expert'! We get trapped inside rigid routines, confirmation bias, and cognitive autopilot, assuming the world holds no more surprises for us!"),
+        ("Tonu", "Albert Einstein famously declared: 'I have no special talents. I am only passionately curious!' He didn't discover the theory of relativity because he was a superhuman calculation machine; he discovered it because he never lost the childlike curiosity to wonder what it would feel like to catch up to a beam of light!"),
+        ("Solu", "Today, we are going to explore the neurobiology of curiosity, dive into the Zen concept of 'Shoshin', learn Richard Feynman's secrets for intellectual honesty, practice turning mundane small talk into electrifying conversations, and elevate your English fluency to new heights!"),
+
+        # SECTION 2: SHOSHIN: THE ZEN BEGINNER'S MIND
+        ("Tonu", "Let's begin by examining one of the most revered concepts in Zen philosophy: 'Shoshin', or 'The Beginner's Mind'!"),
+        ("Solu", "Zen master Shunryu Suzuki opened his legendary book 'Zen Mind, Beginner's Mind' with one of the most famous sentences in spiritual literature: 'In the beginner's mind there are many possibilities, but in the expert's mind there are few.'"),
+        ("Tonu", "Why is that sentence so profound, Solu? What happens when someone becomes an 'expert'?"),
+        ("Solu", "When you label yourself an expert, your mind closes its shutters! You look at a problem and say: 'Oh, I've seen this a thousand times. The answer is X, Y, and Z. There is nothing new here!'"),
+        ("Tonu", "Your past knowledge becomes a mental cage that blinds you to novel perspectives, subtle shifts, and creative breakthroughs!"),
+        ("Solu", "A beginner, on the other hand, approaches every single experience with zero assumptions, zero dogma, and total openness!"),
+        ("Tonu", "A beginner is not afraid to look foolish, is not afraid to ask basic questions, and looks at a familiar tree, a common word, or a daily task as if they are seeing it for the very first time in human history!"),
+        ("Solu", "When Steve Jobs went to Kyoto, Japan, to study Zen Buddhism, he embraced Shoshin! It was that beginner's mind that allowed Apple to look at clunky, button-filled mobile phones and ask: 'Why can't a phone be a single sheet of glass with one button?'"),
+        ("Tonu", "To stay innovative and mentally alive, you must cultivate the humility of a perpetual beginner!"),
+
+        # SECTION 3: THE NEUROSCIENCE OF CURIOSITY: UC DAVIS STUDY
+        ("Solu", "Now let's explore the hard neuroscience! What actually happens inside your physical brain when you become intensely curious about a question?"),
+        ("Tonu", "A landmark brain-imaging study conducted by Dr. Matthias Gruber and neuroscientists at the University of California, Davis, made an extraordinary discovery!"),
+        ("Solu", "What did they discover in their fMRI brain scans, Tonu?"),
+        ("Tonu", "They put participants in fMRI scanners and presented them with various trivia questions while rating their level of curiosity. When participants were genuinely curious to know the answer, two major brain systems lit up like fireworks!"),
+        ("Solu", "First, the brain's 'Dopamine Reward Pathway'—the substantia nigra and ventral tegmental area—surged with dopamine!"),
+        ("Tonu", "Curiosity activates the exact same neurological pleasure reward circuitry as food, music, or romance! Your brain experiences the search for knowledge as an intoxicating biological feast!"),
+        ("Solu", "And second, that dopamine surge flooded straight into the 'Hippocampus'—the brain's master memory hub!"),
+        ("Tonu", "When you are curious, the hippocampus enters a state of high synaptic plasticity! It opens its gates, allowing you to absorb, retain, and recall not only the answer to your question, but even unrelated incidental information presented during that state!"),
+        ("Solu", "That means when you approach learning English with genuine fascination and curiosity, your brain memorizes vocabulary five times faster than when you force yourself to study through boring, mechanical obligation!"),
+
+        # SECTION 4: RICHARD FEYNMAN'S NOTEBOOK OF THINGS I DON'T KNOW
+        ("Solu", "Let's explore the mindset of one of the greatest theoretical physicists in human history: Nobel laureate Richard Feynman!"),
+        ("Tonu", "Feynman was famous not just for quantum electrodynamics, but for his infectious, joyful curiosity! He picked locks at top-secret government laboratories, learned to play Brazilian bongo drums, decoded Mayan hieroglyphs, and drew portraits of ballet dancers!"),
+        ("Solu", "When Feynman was a student at Princeton University, he bought a brand-new blank notebook and wrote on the cover: 'NOTEBOOK OF THINGS I DON'T KNOW'!"),
+        ("Tonu", "He systematically reorganized his entire physics knowledge by writing down every single concept he could not explain in simple, crystal-clear terms to a freshman student!"),
+        ("Solu", "Feynman had a golden rule: 'The first principle is that you must not fool yourself—and you are the easiest person to fool!'"),
+        ("Tonu", "Most people pretend to understand complicated buzzwords and technical jargon to impress their coworkers! Feynman did the exact opposite: he stripped away all jargon until the fundamental truth stood naked in front of him!"),
+        ("Solu", "Never be ashamed to say: 'I don't understand that yet. Can you explain it to me like I am twelve years old?' That radical intellectual honesty is the hallmark of true genius."),
+
+        # SECTION 5: THE SOCRATIC METHOD & THE ART OF CATALYTIC QUESTIONS
+        ("Tonu", "Let's travel back two thousand four hundred years to ancient Athens to learn from the father of Western philosophy: Socrates!"),
+        ("Solu", "Socrates never lectured from a high pedestal; he never wrote a single book! Instead, he walked through the busy Athenian marketplace and simply asked penetrating, relentless questions!"),
+        ("Tonu", "This became known as 'The Socratic Method'! When someone claimed to know what 'Justice' or 'Courage' was, Socrates didn't say: 'You are wrong!'"),
+        ("Solu", "He said: 'That is fascinating. Help me understand: if courage means standing your ground in battle, what do we call a general who orders a strategic retreat to save his soldiers' lives? Is that not courageous?'"),
+        ("Tonu", "By asking thoughtful, layered questions, Socrates helped people examine their own subconscious assumptions and discover deeper truths for themselves!"),
+        ("Solu", "In modern leadership and conversation, the person who asks the best questions holds the greatest influence! A statement closes a mind, but a powerful question opens a universe of exploration."),
+
+        # SECTION 6: CONFIRMATION BIAS & ECHO-BUSTING
+        ("Solu", "Let's address the greatest enemy of curiosity in the twenty-first century: 'Confirmation Bias' and algorithmic echo chambers!"),
+        ("Tonu", "Confirmation bias is the psychological tendency to seek out, believe, and remember information that confirms our pre-existing beliefs, while ignoring or attacking any evidence that contradicts them!"),
+        ("Solu", "And modern social media algorithms are supercharged confirmation-bias engines! If you click on one political or health theory, the algorithm feeds you five hundred identical videos, convincing you that everyone in the world thinks just like you!"),
+        ("Tonu", "How do we break out of this intellectual prison, Solu?"),
+        ("Solu", "By practicing what philosophers call 'Echo-Busting'! Once a week, deliberately read an article, a book, or an essay written by an intelligent person with whom you completely disagree!"),
+        ("Tonu", "Read it not with anger or the desire to attack them on Twitter, but with sincere curiosity: 'What life experiences, historical evidence, and values led this intelligent human being to see the world from this angle?'"),
+        ("Solu", "When you can articulate your opponent's perspective better than they can, you have mastered true intellectual maturity!"),
+
+        # SECTION 7: CROSS-DISCIPLINARY POLYMATHS & DA VINCI'S SECRETS
+        ("Tonu", "Let's look at the concept of the 'Polymath'—a person whose knowledge spans multiple completely different fields!"),
+        ("Solu", "Think of Leonardo da Vinci! Was Leonardo an artist, an anatomist, an engineer, a botanist, or an architect?"),
+        ("Tonu", "He was all of them simultaneously! In his private notebooks, Leonardo wrote daily to-do lists filled with wild curiosity: 'Measure the tongue of a woodpecker', 'Describe the jaw of a crocodile', 'Calculate the proportion of the human foot to the arm', 'Design a flying machine based on bat wings'!"),
+        ("Solu", "Because Leonardo studied water currents in rivers, he understood blood flow through the human heart valve! Because he studied optics and light reflection on stones, he painted the enigmatic, smoky smile of the Mona Lisa!"),
+        ("Tonu", "In modern society, universities force people into hyper-specialized silos where a chemist knows nothing about poetry, and an economist knows nothing about psychology!"),
+        ("Solu", "Cross-pollinate your mind! If you are a computer programmer, study classical music! If you are a doctor, study ancient architecture! The most revolutionary innovations occur at the intersection where two unrelated disciplines collide."),
+
+        # SECTION 8: THE MAGIC PHRASE: 'TELL ME MORE'
+        ("Solu", "Now, let's share a conversational golden key that will transform your social and professional relationships: the phrase 'Tell me more'."),
+        ("Tonu", "Think about standard conversations! Someone tells you: 'I started taking pottery classes on weekends.'"),
+        ("Solu", "How do most people respond? They hijack the conversation! They say: 'Oh yeah, my cousin tried pottery, but she dropped a clay bowl and broke her toe!' They immediately make it about themselves!"),
+        ("Tonu", "Now, imagine how different it feels when you lean forward, look into their eyes, and say: 'Tell me more! What drew you to pottery? What does working with wet clay feel like after staring at a computer screen all week?'"),
+        ("Solu", "Those three simple words—'Tell me more'—give the other person psychological permission to open their heart! It signals that you are genuinely interested in their lived experience."),
+        ("Tonu", "You will never have an awkward or boring conversation again if you treat every human being you meet as an unread book filled with wisdom you have yet to discover."),
+
+        # SECTION 9: CURIOSITY AS AN ANTIDOTE TO ANXIETY & ANGER
+        ("Solu", "Let's explore an extraordinary psychological breakthrough: Curiosity is the ultimate emotional antidote to Anxiety and Anger!"),
+        ("Tonu", "Explain that neurobiological connection, Solu. How can curiosity dissolve anxiety?"),
+        ("Solu", "Neurologically, it is almost impossible for your brain to experience intense curiosity and intense anxiety at the exact same moment!"),
+        ("Tonu", "Why? Because anxiety is about self-protection, constriction, and catastrophe: 'What if I fail? What if they laugh at me?'"),
+        ("Solu", "While curiosity is about expansion, exploration, and openness: 'I wonder what will happen next? I wonder what I will learn from this challenge?'"),
+        ("Tonu", "When you feel nervous before a job interview or an English presentation, flip your mental switch from fear to curiosity! Say: 'I am curious to meet the interview panel. I am curious to see what questions they ask and how my mind responds!'"),
+        ("Solu", "And when someone cuts you off in traffic or acts rude, instead of exploding in rage, get curious: 'I wonder what unbearable family tragedy or emergency that driver is rushing through right now?' Curiosity dissolves resentment into compassion."),
+
+        # SECTION 10: MICRO-CURIOSITY: CULTIVATING WONDER IN DAILY LIFE
+        ("Tonu", "You don't need a trip to Antarctica to practice curiosity; you can practice 'Micro-Curiosity' right outside your front door!"),
+        ("Solu", "Look down at the sidewalk on your way to work: observe a trail of tiny ants carrying a breadcrumb! Notice the intricate geometric veins on a fallen autumn leaf!"),
+        ("Tonu", "Look up at the names of the streets in your neighborhood: Who was the person that street was named after? What did they build or fight for one hundred years ago?"),
+        ("Solu", "Taste your morning coffee with full sensory attention: can you detect the subtle notes of roasted cocoa, citrus, or hazelnut?"),
+        ("Tonu", "As poet William Blake wrote: 'To see a World in a Grain of Sand, And a Heaven in a Wild Flower, Hold Infinity in the palm of your hand, And Eternity in an hour.'"),
+        ("Solu", "When you cultivate micro-curiosity, boredom disappears completely from your existence."),
+
+        # SECTION 11: EPISTEMIC CURIOSITY VS DIVERSIVE CURIOSITY
+        ("Tonu", "Let's explore an essential psychological distinction analyzed by author Ian Leslie in his book 'Curious': 'Diversive Curiosity' versus 'Epistemic Curiosity'!"),
+        ("Solu", "What is Diversive Curiosity, Tonu?"),
+        ("Tonu", "Diversive curiosity is that restless, superficial itch for constant novelty! It is scrolling through TikTok videos, clicking on celebrity gossip headlines, or jumping from one YouTube short to another!"),
+        ("Solu", "It gives you a tiny spike of dopamine, but leaves you mentally empty, scattered, and distracted!"),
+        ("Tonu", "Now, compare that to 'Epistemic Curiosity'! Epistemic curiosity is the deep, disciplined, intentional desire to understand how things work at a fundamental level!"),
+        ("Solu", "Epistemic curiosity requires effort, focus, and sustained inquiry. It is reading a comprehensive history book, learning how an airplane wing creates aerodynamic lift, or taking six months to master English prepositions!"),
+        ("Tonu", "Diversive curiosity consumes your attention; epistemic curiosity builds your intellectual character and creative mastery!"),
+
+        # SECTION 12: THE NIGHTLY CURIOSITY AUDIT & ADMITTING YOU WERE WRONG
+        ("Solu", "Let's share a transformative evening journaling ritual: 'The Two-Question Curiosity Audit'!"),
+        ("Tonu", "Before your head hits the pillow at night, open your journal and ask yourself two simple, profound questions!"),
+        ("Solu", "Question number one: 'What did I encounter or learn today that genuinely surprised me?'"),
+        ("Tonu", "If nothing surprised you today, you weren't paying close enough attention! The world is always whispering new truths."),
+        ("Solu", "And Question number two: 'What is one assumption, belief, or opinion that I realized I was completely wrong about today?'"),
+        ("Tonu", "Most people defend their opinions with stubborn pride, even when evidence proves them wrong!"),
+        ("Solu", "Renowned economist John Maynard Keynes famously said: 'When the facts change, I change my mind. What do you do, sir?'"),
+        ("Tonu", "Admitting you were wrong is not defeat; admitting you were wrong is celebrating that you are wiser today than you were yesterday!"),
+
+        # SECTION 13: CURIOSITY OVER BLAME IN PERSONAL RELATIONSHIPS
+        ("Solu", "Let's also look at how curiosity transforms romantic relationships and family dynamics!"),
+        ("Tonu", "When your partner, parent, or close friend does something annoying or behaves erratically, our default reaction is judgment and blame: 'Why are they so selfish? Why can't they act normal?'"),
+        ("Solu", "Judgment closes communication doors and triggers bitter defensiveness!"),
+        ("Tonu", "Instead of reacting with blame, pause and switch to radical curiosity!"),
+        ("Solu", "Ask yourself: 'What unseen pressure, fear, or exhaustion are they carrying today that made them snap? What unmet need is hiding behind their sharp tone?'"),
+        ("Tonu", "And ask them gently: 'I can feel that you are carrying a lot of weight today. What is hurting or frustrating you right now?'"),
+        ("Solu", "Curiosity replaces hostility with compassion, turning potential arguments into moments of profound intimacy."),
+
+        # SECTION 14: THE '5 WHYS' TECHNIQUE & ROOT-CAUSE ANALYSIS
+        ("Solu", "Let's also examine a legendary problem-solving methodology created by Sakichi Toyoda, the industrial founder of Toyota: 'The 5 Whys Technique'!"),
+        ("Tonu", "What is the 5 Whys Technique, Solu? How does it apply to everyday life?"),
+        ("Solu", "Whenever a problem or unwanted behavior occurs, Toyoda taught his engineers not to fix the superficial symptom, but to ask 'Why?' five consecutive times!"),
+        ("Tonu", "Give our listeners a clear everyday example!"),
+        ("Solu", "Suppose you say: 'I procrastinated on studying my English vocabulary today.' That is the surface symptom! Why? 'Because I felt overwhelmed.' Why? 'Because I set an unrealistic goal to memorize one hundred words in one hour.' Why? 'Because I felt insecure comparing myself to someone on social media.' Why? 'Because I haven't defined my own authentic learning milestones!'"),
+        ("Tonu", "Look at how magnificent that is! By asking 'Why?' five times, you uncovered the real psychological root: social media comparison and unclear milestones, rather than mere laziness!"),
+        ("Solu", "Relentless curiosity peels back the layers of your subconscious and gives you the exact blueprint to solve any challenge permanently!"),
+        ("Tonu", "When you stop settling for superficial answers, you discover that every single personal struggle contains a hidden seed of profound wisdom and enduring self-knowledge."),
+        ("Solu", "It transforms everyday frustration into a thrilling, joyful detective investigation of your own magnificent mind."),
+
+        # SECTION 15: LIVE ROLEPLAY: TRANSFORMING A BORING CONVERSATION INTO A FASCINATING EXCHANGE
+        ("Solu", "Now let's demonstrate a realistic real-world roleplay! Imagine a colleague or acquaintance gives you a standard, mundane answer during small talk: 'Oh, work has been pretty busy and stressful lately.'"),
+        ("Tonu", "Most people just say: 'Yeah, same here, work is always crazy,' and the conversation dies!"),
+        ("Solu", "Let's show how to use catalytic curiosity to unlock a deeply engaging conversation! Tonu, play the stressed colleague."),
+        ("Tonu", "Ugh, Solu, honestly, work has been so exhausting and busy lately. I feel like I'm running on a treadmill."),
+        ("Solu", "Here is how you unlock their world: 'I hear you, Tonu; that constant treadmill feeling can really wear a person down. When you look at everything on your plate right now, what is the single project that you are genuinely most excited about, even if it is challenging? And what is the one thing you wish you could eliminate completely if you had a magic wand?'"),
+        ("Tonu", "Look at how magnificent that pivot is! You acknowledged their exhaustion with empathy, and then asked two thought-provoking questions that make them reflect on their true values and passions!"),
+        ("Solu", "Suddenly, you are having a profound twenty-minute conversation about career purpose and creative dreams!"),
+        ("Tonu", "Curiosity turns strangers into soulmates and dull banter into life-changing connection."),
+
+        # SECTION 12: VOCABULARY & IDIOM SPOTLIGHT (6 KEY IDIOMS)
+        ("Tonu", "Now, let's step into our signature vocabulary segment: Key Everyday English Idioms and Phrases! Today, we have selected six colorful, essential expressions about curiosity, learning, and open-mindedness!"),
+        ("Solu", "Let's master them together! Tonu, what is our very first idiom for today?"),
+        ("Tonu", "Our first expression is 'food for thought'. 'Food for thought' refers to an interesting idea, fact, or question that gives you plenty to think about deeply."),
+        ("Solu", "Let's listen to a natural conversational example: 'Her lecture on the psychology of decision-making provided plenty of food for thought for our entire team.'"),
+        ("Tonu", "That will keep your mind chewing! What is our second expression, Solu?"),
+        ("Solu", "Our second expression is a wonderful conversational request: 'pick someone's brain'. To 'pick someone's brain' means to ask someone questions in order to obtain their expert advice, knowledge, or insights on a topic."),
+        ("Tonu", "Here is how you can use it: 'I know you have extensive experience with international marketing; do you have thirty minutes tomorrow so I can pick your brain over coffee?'"),
+        ("Solu", "A very flattering and polite request! Tonu, introduce our third idiom."),
+        ("Tonu", "Our third expression is a classic for innovation: 'think outside the box'. To 'think outside the box' means to think creatively, unconventionally, and from a fresh perspective rather than following traditional methods."),
+        ("Solu", "Let's hear an example: 'To solve the shipping bottlenecks, the engineering team had to think outside the box and redesign their entire warehouse logistics.'"),
+        ("Tonu", "Break free from the box! What is our fourth expression, Solu?"),
+        ("Solu", "Our fourth expression is 'learn the ropes'. To 'learn the ropes' means to learn the basic rules, skills, or procedures of a new job, activity, or environment."),
+        ("Tonu", "For example: 'It took him a couple of months to learn the ropes at his new software firm, but now he navigates the codebase with total confidence.'"),
+        ("Solu", "Be patient while learning the ropes! Tonu, take us to our fifth idiom."),
+        ("Tonu", "Our fifth expression is a famous proverb with an overlooked second half: 'curiosity killed the cat, but satisfaction brought it back'!"),
+        ("Solu", "Everyone knows 'curiosity killed the cat', but the historical completion is 'but satisfaction brought it back'! That means that taking risks to discover knowledge and truth brings deep satisfaction that revives you!"),
+        ("Tonu", "Here is an example: 'They told him not to investigate the mysterious old family documents, but curiosity killed the cat and satisfaction brought it back when he uncovered a fascinating lineage!'"),
+        ("Solu", "And what is our sixth and final expression for today, Tonu?"),
+        ("Tonu", "Our sixth expression describes mental expansion: 'broaden one's horizons'. To 'broaden your horizons' means to expand your knowledge, experience, worldview, and understanding of the world."),
+        ("Solu", "Let's hear an inspiring example: 'Learning English and reading global literature has truly broadened her horizons and changed how she views humanity.'"),
+
+        # SECTION 13: INTERACTIVE SPEAKING PRACTICE
+        ("Solu", "Now, it is time for our Interactive Speaking Challenge! This is your turn to speak English out loud along with us. Lift your head high, smile with your eyes, breathe deeply, and repeat each sentence with energy and clear cadence!"),
+        ("Tonu", "Sentence number one: 'Cultivating a beginner's mind keeps your spirit forever young, curious, and open to magic.' Your turn!"),
+        ("Solu", "Speak it out loud with clear cadence: 'Cultivating a beginner's mind keeps your spirit forever young, curious, and open to magic.'"),
+        ("Tonu", "Beautiful rhythm! Sentence number two: 'Never be afraid to ask questions; curiosity is the engine of wisdom and growth.' Your turn!"),
+        ("Solu", "Repeat with steady conviction: 'Never be afraid to ask questions; curiosity is the engine of wisdom and growth.'"),
+        ("Tonu", "Wonderful! Sentence number three: 'Learning a new language broadens your horizons and unlocks worlds you never imagined.' Your turn!"),
+        ("Solu", "Say it clearly: 'Learning a new language broadens your horizons and unlocks worlds you never imagined.'"),
+        ("Tonu", "Sentence number four: 'When you replace judgment with curiosity, understanding flourishes everywhere.' Your turn!"),
+        ("Solu", "Let's say sentence number four together: 'When you replace judgment with curiosity, understanding flourishes everywhere.'"),
+        ("Tonu", "Outstanding work! Your spoken English is vibrant, expressive, and full of natural intellectual vitality!"),
+
+        # SECTION 14: REFLECTION & FAREWELL
+        ("Solu", "And now, it is time for today's Weekly Reflection Question! We want you to practice writing in English down in the comment section below."),
+        ("Tonu", "Here is today's question: 'What is a topic, hobby, or question that you have always been curious about, but never took the time to explore? What is one question you will investigate this week with a beginner's mind?'"),
+        ("Solu", "Writing your curiosity down in English sparks new synaptic connections and inspires our global learning family. Share your thoughts in the comments below!"),
+        ("Tonu", "Solu and I read through every single comment, and we are so proud of your dedication across all forty episodes of Daily Speak English!"),
+        ("Solu", "Remember: stay curious, stay humble, and never stop looking at this magnificent world with wide, wondering eyes."),
+        ("Tonu", "Keep asking questions, keep expanding your horizons, and keep speaking English with bold joy every single day!"),
+        ("Solu", "Until next time, goodbye from Solu!"),
+        ("Tonu", "And goodbye from Tonu!"),
+        ("Both", "Happy learning, stay curious, and goodbye!")
+    ]
+    return turns
+
+if __name__ == "__main__":
+    t = build_ep40()
+    gen_common.verify_and_save(40, "scripts/daily_speak_ep40_full.txt",
+                              "Curiosity, Lifelong Questioning & The Beginner's Mind",
+                              "Daily Speak English | English Listening & Speaking Practice",
+                              t)

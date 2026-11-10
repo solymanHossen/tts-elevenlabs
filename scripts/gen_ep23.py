@@ -1,0 +1,163 @@
+#!/usr/bin/env python3
+import gen_common
+
+def build_ep23():
+    turns = [
+        # SECTION 1: WARM WELCOME & HOOK
+        ("Tonu", "Hey hey, lovely listeners! Welcome back to Daily Speak English, your favorite place to improve your English listening and speaking skills. I'm Tonu!"),
+        ("Solu", "And I'm Solu! It is so wonderful to be back together with all of you for another lively, thoughtful, and refreshing English practice session."),
+        ("Tonu", "Solu, look out the window right now! What do you see? Do you hear the roaring engines of city traffic, or do you hear the gentle rustle of leaves in the breeze?"),
+        ("Solu", "Right now, I hear sirens wailing in the distance, construction hammers pounding, and people chatting on the sidewalk below! I am definitely in the middle of a vibrant, fast-moving city!"),
+        ("Tonu", "And did you grow up in a big city, Solu, or were your roots in a quieter town?"),
+        ("Solu", "I actually spent my childhood in a small riverside town where everyone rode bicycles and knew each other's names! But when I turned eighteen, I packed my bags and moved to a huge metropolis for university."),
+        ("Tonu", "That was such a massive cultural transition for you! I grew up right in the heart of a bustling capital, so when I first visited a real countryside farm as a teenager, the absolute silence at night actually felt terrifying to me!"),
+        ("Solu", "Haha! Isn't that hilarious? City people can be so accustomed to continuous background sirens and traffic hum that genuine natural silence feels loud and disorienting!"),
+        ("Tonu", "It really does! And that brings us directly to today's fascinating question: Urban Life versus Countryside Living: Where Does True Happiness Live?"),
+        ("Solu", "This is a debate that has captivated humanity for generations. Should you build your life in the energetic pulse of a glittering megacity, or should you seek peace, quiet, and fresh air in a charming countryside village?"),
+        ("Tonu", "Every year, millions of people pack up moving vans—some flee the crowded cities in search of rural serenity, while others leave quiet country towns to chase their dreams under the bright skyline lights."),
+        ("Solu", "Today, we are going to explore both worlds honestly: the exhilarating highs, the hidden costs, the psychology of space, and how remote work is completely redefining where we live."),
+        ("Tonu", "And of course, we will arm you with essential everyday English expressions, idioms, and natural speaking practice so you can express your thoughts on lifestyle and environment with total confidence!"),
+
+        # SECTION 2: THE MAGIC & ALLURE OF THE BIG CITY
+        ("Solu", "Let's begin by celebrating the undeniable magic of the modern metropolis! Tonu, what draws people to the city like moths to a flame?"),
+        ("Tonu", "It is the electric energy, Solu! When you step out onto the streets of London, Tokyo, New York, or Seoul, you feel the pulse of human ambition vibrating in the air."),
+        ("Solu", "Everything you could possibly crave is right at your fingertips twenty-four hours a day! If you want authentic Vietnamese pho at midnight, you can find it. If you want to visit a world-class art museum on a Tuesday afternoon, it is three subway stops away."),
+        ("Tonu", "And the cultural diversity is extraordinary. In a big city, you walk through neighborhoods where you hear twenty different languages spoken within a single block. You are exposed to global music, experimental theater, indie cinemas, and groundbreaking ideas."),
+        ("Solu", "And for your career, big cities are powerhouse hubs of opportunity. Top companies, networking events, venture capital, and creative collaborators are concentrated within dense geographic clusters."),
+        ("Tonu", "Public transportation is another huge advantage. You don't need to purchase an expensive car, pay for gas, or deal with costly maintenance. You can simply hop on a bus, train, or bicycle and zip across town."),
+
+        # SECTION 3: THE DARK SIDE OF URBAN LIFE: SENSORY OVERLOAD & COST
+        ("Solu", "But as wonderful as cities are, there is a heavy price to pay for that excitement. What is the darker side of urban living, Tonu?"),
+        ("Tonu", "The first is the astronomical cost of living! In major world capitals, rent has skyrocketed so high that young professionals often pay sixty percent of their salary just to live in a shoe-box apartment with barely enough room for a bed and a tiny desk!"),
+        ("Solu", "And the sensory overload can be relentless! Human biology was not evolved to endure continuous sirens, honking horns, flashing neon signs, and crowded subway cars twice a day."),
+        ("Tonu", "Environmental scientists have documented that 'noise pollution' in cities elevates your cortisol levels—the stress hormone—even while you are asleep! Your brain never fully relaxes because it is constantly scanning background noises for danger."),
+        ("Solu", "And there is a peculiar psychological paradox that sociologist Georg Simmel described over a century ago: the 'lonely crowd'. You can be surrounded by eight million people on crowded streets, yet feel completely, utterly isolated."),
+        ("Tonu", "Yes! Because everyone in a hurry puts on their headphones, avoids eye contact, and rushes forward with their heads down. The very density that brings people together can paradoxically make genuine human connection harder to find."),
+
+        # SECTION 4: THE PEACE & SERENITY OF THE COUNTRYSIDE
+        ("Solu", "Now, let's step across the boundary into the countryside! Close your eyes for a moment and imagine: rolling green hills, tall ancient trees, the crisp fragrance of damp earth after rain, and total, uninterrupted silence."),
+        ("Tonu", "Oh Solu, just saying those words lowers my heart rate! The peace of rural living is truly profound."),
+        ("Solu", "When you live in the countryside, your relationship with nature resets. You wake up to the song of wild birds instead of an abrasive alarm clock. You look up at the night sky and you can see millions of glittering stars, milky galaxies, and constellations that are completely drowned out by city light pollution."),
+        ("Tonu", "And space! For the price of a cramped studio apartment in the city center, in the countryside you can have a spacious home with a blooming flower garden, an apple orchard, a workshop, and a sprawling backyard for your pets to run freely!"),
+        ("Solu", "Many people discover the therapeutic magic of gardening—planting heirloom tomatoes, harvesting fresh herbs, picking crisp apples from your own trees, and cooking meals with ingredients that traveled zero food miles!"),
+        ("Tonu", "And community bonds in small villages are often much tighter and more resilient. People actually know their neighbors by name. If you are unwell, someone brings over warm homemade soup. When you walk past the village bakery, the shopkeeper asks after your family."),
+
+        # SECTION 5: THE REALITIES & CHALLENGES OF RURAL LIFE
+        ("Solu", "However, we must be honest: countryside life is not just a romantic fairy tale on Instagram! What are the daily challenges of living far away from the city, Tonu?"),
+        ("Tonu", "The biggest reality check is convenience! In a remote village, you cannot order takeout on your phone at 11 PM. If you run out of milk, the nearest grocery store might be a twenty-minute drive along dark country lanes."),
+        ("Solu", "And you are virtually forced to own a reliable car. In rural areas, public transportation is often infrequent or completely non-existent. If your car breaks down, you are essentially stranded!"),
+        ("Tonu", "Access to specialized healthcare, hospitals, high-ranking universities, and specialized job markets can be quite limited. If you work in high finance or luxury fashion, living three hours from the nearest financial center might derail your career ambitions."),
+        ("Solu", "And what about privacy? While city life can feel too anonymous, small village life can sometimes feel too exposed! Everyone knows your business, who visited your house, and what time you came home!"),
+        ("Tonu", "Haha! Very true! The local gossip mill in a sleepy country village can be just as intense as social media!"),
+
+        # SECTION 6: THE COMMUTE PARADOX & DAILY TRANSPORTATION
+        ("Solu", "Let's talk about how we move around in these two environments: Public Transportation versus Driving!"),
+        ("Tonu", "Transportation has an astonishingly massive impact on your day-to-day happiness! Behavioral economists have studied what they call the 'Commuter Paradox'."),
+        ("Solu", "Explain that paradox to our listeners, Tonu. It is mind-blowing!"),
+        ("Tonu", "Researchers found that people regularly sacrifice thirty or forty minutes of extra commute time in order to buy a bigger house further outside the city. They think: 'I will have an extra bedroom and a bigger lawn, so I will be much happier!'"),
+        ("Solu", "And what did the happiness data reveal?"),
+        ("Tonu", "A long, frustrating, bumper-to-bumper car commute on a jammed highway is one of the single most happiness-destroying activities in human existence! The chronic stress of gridlock traffic, aggressive drivers, and delays erodes all the pleasure you get from having a slightly larger living room!"),
+        ("Solu", "Whereas in a well-designed city with efficient subways or protected bicycle lanes, commuting can actually be enjoyable! You can read a novel on the train, listen to a podcast like Daily Speak English, or get healthy cardio by cycling along a tree-lined canal."),
+        ("Tonu", "On the other hand, driving on an empty country road at sunset with the windows down and classical music playing can be deeply therapeutic. The difference is predictable freedom versus stressful traffic jams."),
+
+        # SECTION 7: RAISING CHILDREN: CITY KIDS VS COUNTRY KIDS
+        ("Solu", "Tonu, what about raising children? Many parents agonize over whether to raise their kids in the city or in the countryside!"),
+        ("Tonu", "Both settings offer such unique, beautiful gifts to a growing child. Country kids grow up with scraped knees, climbing oak trees, catching frogs in streams, and understanding the rhythm of the seasons."),
+        ("Solu", "They develop a deep, visceral reverence for animals, agriculture, and the natural world. They have the freedom to ride their bikes down dirt roads until twilight without constant parental supervision."),
+        ("Tonu", "While city kids grow up with incredible cultural literacy! They navigate subway systems by age twelve, visit world-class science museums on school trips, and attend classes alongside classmates from forty different nationalities and backgrounds."),
+        ("Solu", "They become remarkably street-smart, socially adaptable, and open-minded to different worldviews from an early age."),
+        ("Tonu", "Neither childhood is superior; they simply nurture different strengths."),
+
+        # SECTION 8: FOOD SYSTEMS & FARMERS MARKETS
+        ("Solu", "Now let's examine the food we eat every day: Farm-Fresh Country Produce versus Global Urban Gastronomy!"),
+        ("Tonu", "In the countryside, you have the unparalleled joy of seasonal abundance. You can stop your car at a wooden roadside stand, put a few coins in an honesty box, and drive away with heirloom tomatoes picked from the vine just two hours earlier!"),
+        ("Solu", "The flavor of a sun-ripened, organic strawberry picked straight from a local farm will completely ruin supermarket strawberries for you forever! It bursts with natural sweetness and fragrance."),
+        ("Tonu", "And you know the farmer personally! You understand the soil, the water, and the hard labor that went into nourishing your family."),
+        ("Solu", "Meanwhile in the city, while your grocery store food may be wrapped in excessive plastic, you have access to the culinary treasures of the entire planet!"),
+        ("Tonu", "Within a ten-minute walk, you can enjoy Ethiopian injera, Japanese ramen, Mexican street tacos, or artisanal sourdough bread baked by third-generation master bakers!"),
+
+        # SECTION 9: AGING & HEALTHCARE ACCESSIBILITY
+        ("Solu", "Let's also consider how our needs evolve across different stages of life, particularly as we grow older into our retirement years."),
+        ("Tonu", "This is a very practical reality that many people overlook when dreaming of retiring to a remote mountain cabin. When you are twenty-five and healthy, climbing steep hills and chopping firewood is invigorating."),
+        ("Solu", "But when you are seventy-five, having an elevator in your apartment building, level sidewalks, and a hospital with cardiac specialists just five minutes away becomes a vital lifeline."),
+        ("Tonu", "Many retirees find that the walkability of a compact city—where they can walk to the pharmacy, the bakery, the library, and the park without ever having to drive—keeps them physically active, socially connected, and independent much longer."),
+
+        # SECTION 10: THE 15-MINUTE CITY VS COTTAGECORE REALITIES
+        ("Solu", "Urban planners around the world are currently promoting a revolutionary concept called the '15-Minute City'. What is a 15-minute city, Tonu?"),
+        ("Tonu", "A 15-minute city is an urban design philosophy where daily necessities—grocery stores, schools, parks, healthcare, cafes, and workplaces—are all reachable within a fifteen-minute walk or pleasant bike ride from your front door!"),
+        ("Solu", "Cities like Paris, Barcelona with its famous 'Superblocks', and Melbourne are redesigning streets to prioritize pedestrians, trees, and bicycles over speeding cars."),
+        ("Tonu", "When a city is designed around humans instead of automobiles, city living loses much of its stressful chaos and gains the warm community feel of a friendly village!"),
+        ("Solu", "And on the flip side, we must address the social media craze known as 'Cottagecore'—where young influencers post idyllic videos of wearing vintage linen dresses, baking artisan bread, and tending to fluffy chickens in misty meadows!"),
+        ("Tonu", "Haha! Cottagecore is such a romantic fantasy! But what they don't show you on Instagram is the reality of country chores: shoveling frozen mud in January, dealing with mice sneaking into the pantry, frozen water pipes, and power outages during heavy winter thunderstorms!"),
+        ("Solu", "Country life requires real physical grit, self-reliance, and practical handiness with tools. You can't just call a landlord whenever a pipe leaks."),
+        ("Tonu", "Exactly! Embracing either lifestyle with eyes wide open—appreciating the real gifts while accepting the genuine trade-offs—is the true secret to finding lasting happiness."),
+
+        # SECTION 11: THE REMOTE WORK REVOLUTION & THE HYBRID SWEET SPOT
+        ("Solu", "Now, let's talk about the seismic shift that has occurred in the last few years: Remote Work and High-Speed Fiber Internet!"),
+        ("Tonu", "This has completely rewritten the rulebook! Historically, people HAD to live in cities because that is where the physical office buildings, factories, and desks were located."),
+        ("Solu", "Today, millions of knowledge workers, software developers, writers, designers, and consultants can perform their jobs from anywhere with a laptop and a stable Wi-Fi connection."),
+        ("Tonu", "And that has sparked what urban planners call the 'Suburban and Small-Town Renaissance'. People are flocking to mid-sized coastal towns, mountain villages, and peaceful rural outskirts within an hour or two of major cities."),
+        ("Solu", "They enjoy the best of both worlds! They enjoy the spacious home, clean air, and safety of the country during the week, and take the train into the city once or twice a month to attend a concert, meet colleagues, or dine at a Michelin-starred restaurant."),
+        ("Tonu", "That hybrid sweet spot gives you the restorative peace of nature without entirely severing your connection to urban culture."),
+
+        # SECTION 7: URBAN GREENERY & RECONNECTING WITH NATURE IN CITIES
+        ("Solu", "What if someone loves their city career and cannot move away? How can city dwellers protect their mental wellbeing and stay connected with the natural world?"),
+        ("Tonu", "You have to be intentional about carving out 'green sanctuaries' within your urban routine. Japanese researchers have proven the remarkable mental health benefits of 'Shinrin-yoku' or 'Forest Bathing'—spending mindful time under the canopy of trees."),
+        ("Solu", "Even in a massive city, you can find botanical gardens, public parks, riverside paths, and leafy squares. Committing to a daily thirty-minute walk through a tree-lined park without looking at your phone drops your blood pressure and clears mental fog."),
+        ("Tonu", "And bring nature indoors! Fill your apartment with vibrant houseplants, keep a herb garden on your kitchen windowsill, and open your windows wide in the morning to let fresh air circulate."),
+        ("Solu", "And remember: true peace of mind is an internal state, not just a postal code! As the ancient Roman philosopher Horace famously noted: 'Those who cross the sea change their skies, not their soul.'"),
+        ("Tonu", "If you are anxious, restless, and constantly unhappy inside, moving to a quiet cabin in the woods won't magically solve your problems; you will just be an anxious person sitting in the woods!"),
+        ("Solu", "Happiness is cultivated through inner contentment, deep relationships, purposeful work, and gratitude—regardless of whether your address is a skyscraper or a farmhouse."),
+
+        # SECTION 8: VOCABULARY & IDIOM SPOTLIGHT (6 KEY IDIOMS)
+        ("Tonu", "Now, let's step into our signature segment: Key Everyday English Vocabulary and Idioms! Today, we have selected six colorful, essential expressions inspired by cities, countryside, and lifestyle."),
+        ("Solu", "Let's learn them together! Tonu, what is our very first urban expression for today?"),
+        ("Tonu", "Our first expression is 'concrete jungle'. A 'concrete jungle' is a noun phrase that describes a modern city or urban environment with dense high-rise buildings, heavy traffic, and very few green parks or trees."),
+        ("Solu", "Let's hear a realistic conversational example: 'After living in the concrete jungle of downtown Manhattan for five years, Liam longed for the open fields and quiet forests of his childhood home.'"),
+        ("Tonu", "That captures the feeling perfectly. What is our second expression, Solu?"),
+        ("Solu", "Our second expression is 'hustle and bustle'. 'Hustle and bustle' refers to lively, noisy, fast-paced, and energetic activity, especially in busy city centers, markets, or stations."),
+        ("Tonu", "Here is how you can use it naturally: 'I love escaping the hustle and bustle of the city on weekends to relax at a quiet lake cottage with a good book.'"),
+        ("Solu", "Brilliant! Tonu, introduce our third expression."),
+        ("Tonu", "Our third expression is 'off the beaten track'. When a place is 'off the beaten track', it means it is isolated, secluded, and far away from where most tourists or crowds travel."),
+        ("Solu", "Let's listen to an everyday example: 'We discovered a delightful little family-run bakery tucked away off the beaten track in a sleepy coastal village.'"),
+        ("Tonu", "What a lovely image. What is our fourth expression, Solu?"),
+        ("Solu", "Our fourth expression is very common when talking about city prices: 'cost an arm and a leg'. When something 'costs an arm and a leg', it means it is exorbitantly, ridiculously expensive!"),
+        ("Tonu", "For example: 'Renting even a tiny one-bedroom apartment in the center of Tokyo costs an arm and a leg these days!'"),
+        ("Solu", "So true! Tonu, take us to our fifth expression."),
+        ("Tonu", "Our fifth expression is 'the rat race'. 'The rat race' refers to the exhausting, fierce, and competitive modern lifestyle where people work endlessly long hours just to survive, gain status, or get ahead in corporate careers."),
+        ("Solu", "Here is a great sentence: 'After twenty years in corporate finance, Robert decided to step out of the rat race, move to the countryside, and open a small pottery studio.'"),
+        ("Tonu", "And what is our sixth and final expression for today, Solu?"),
+        ("Solu", "Our sixth expression is 'a breath of fresh air'. When someone or something is 'a breath of fresh air', it means they are pleasantly new, refreshing, different, and invigorating!"),
+        ("Tonu", "Let's hear an example: 'Her positive, optimistic attitude was such a breath of fresh air after working in a stressful, complaining office all week.'"),
+
+        # SECTION 9: INTERACTIVE SPEAKING PRACTICE
+        ("Solu", "Now, it is time for our Interactive Speaking Challenge! This is where you practice your spoken English out loud with us. Speak with clarity, steady rhythm, and real conviction!"),
+        ("Tonu", "Listen to sentence number one, and repeat it in the pause: 'I love visiting the bustling city for culture, but I need the calm of nature to recharge.' Your turn!"),
+        ("Solu", "Say it out loud with confidence: 'I love visiting the bustling city for culture, but I need the calm of nature to recharge.'"),
+        ("Tonu", "Wonderful job! Sentence number two: 'Renting an apartment in the downtown core costs an arm and a leg.' Your turn!"),
+        ("Solu", "Speak it clearly: 'Renting an apartment in the downtown core costs an arm and a leg.'"),
+        ("Tonu", "Great cadence! Sentence number three: 'Taking a brisk walk through the local park is a wonderful breath of fresh air.' Your turn!"),
+        ("Solu", "Repeat with warmth: 'Taking a brisk walk through the local park is a wonderful breath of fresh air.'"),
+        ("Tonu", "Sentence number four: 'More and more professionals are escaping the rat race thanks to flexible remote work.' Your turn!"),
+        ("Solu", "Let's say sentence number four together: 'More and more professionals are escaping the rat race thanks to flexible remote work.'"),
+        ("Tonu", "Outstanding work! Your pronunciation is sounding more natural and fluent with every single repetition."),
+
+        # SECTION 10: REFLECTION & FAREWELL
+        ("Solu", "And now, it is time for today's Weekly Reflection Question! We want you to practice your English writing in the comment section below."),
+        ("Tonu", "Here is today's question: 'If you could choose your ideal living environment right now without any financial limits, would you choose a stylish apartment in a bustling global metropolis, or a peaceful cottage surrounded by countryside greenery? And why?'"),
+        ("Solu", "Tell us what matters most to your lifestyle: the cultural energy and convenience of the city, or the space, tranquility, and clean air of the countryside?"),
+        ("Tonu", "Solu and I read through every comment and reply to your ideas. Writing your thoughts down is the best way to lock in the vocabulary you practiced today!"),
+        ("Solu", "Remember, wherever you live, make time for stillness, cultivate meaningful friendships, and appreciate the beauty around you."),
+        ("Tonu", "Keep practicing your English every single day with curiosity and joy. Take care of yourself, and have a marvelous day!"),
+        ("Solu", "Until next time, goodbye from Solu!"),
+        ("Tonu", "And goodbye from Tonu!"),
+        ("Both", "Happy learning, live well, and goodbye!")
+    ]
+    return turns
+
+if __name__ == "__main__":
+    t = build_ep23()
+    gen_common.verify_and_save(23, "scripts/daily_speak_ep23_full.txt",
+                              "Urban Life vs Countryside Living: Where is Happiness?",
+                              "Daily Speak English | English Listening & Speaking Practice",
+                              t)

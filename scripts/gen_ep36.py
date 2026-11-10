@@ -1,0 +1,197 @@
+#!/usr/bin/env python3
+"""
+Daily Speak English - Episode 36
+Title: The Power of Introverts in an Extroverted World
+Requirements:
+- Starts with Tonu: "Hey hey, lovely listeners!..."
+- Words >= 3,550 (strict duration >= 25.5 - 28.0 mins)
+- High-level engaging, natural conversational English
+"""
+
+import gen_common
+
+def build_ep36():
+    turns = [
+        # SECTION 1: MAGNETIC OPENING
+        ("Tonu", "Hey hey, lovely listeners! Welcome back to Daily Speak English, your favorite place to become fluent, confident, and unstoppable in English! I'm Tonu!"),
+        ("Solu", "And I'm Solu! Welcome back, everyone! Today, we are exploring a deeply empowering and liberating topic: the quiet strength, unique brilliance, and hidden superpowers of introverts in a world that often can't stop shouting!"),
+        ("Tonu", "Solu, think about modern society! From school classrooms with group desks to open-plan corporate offices, our culture constantly glorifies the loudest, most outgoing person in the room!"),
+        ("Solu", "We live in what author Susan Cain calls 'The Extrovert Ideal'—the omnipresent belief that the ideal human being is bold, charismatic, alpha, highly talkative, and constantly comfortable under the spotlight!"),
+        ("Tonu", "And if you are someone who prefers quiet reflection, solitary hobbies, deep one-on-one conversations, and reading over wild parties, society often treats you like there is something wrong with you! People ask: 'Why are you so quiet? Why don't you speak up more?'"),
+        ("Solu", "Today, we want to shatter that myth completely! Being introverted is not a flaw, it is not a pathology, and it is definitely not a weakness! Some of the greatest scientists, artists, philosophers, and visionary leaders in human history were proud introverts!"),
+        ("Tonu", "Today, you will discover the fascinating neuroscience behind introversion, how to leverage your quiet superpowers in social and professional life, and master advanced English expressions along the way!"),
+
+        # SECTION 2: INTROVERSION VS SHYNESS & THE NEUROLOGY OF SENSITIVITY
+        ("Solu", "Let's begin by clarifying a massive psychological misconception that confuses millions of people: the difference between being 'introverted' and being 'shy'!"),
+        ("Tonu", "People use those two words interchangeably, but in psychology, they mean completely different things! What is the difference, Solu?"),
+        ("Solu", "Shyness is the fear of social judgment, humiliation, or negative evaluation. A shy person desperately wants to participate and connect, but is terrified of being mocked or criticized!"),
+        ("Tonu", "Introversion, on the other hand, is about how your central nervous system responds to stimulation and where you draw your energy from! An introvert is not necessarily afraid of people at all; they simply prefer environments with lower sensory input!"),
+        ("Solu", "And this is rooted deep in brain chemistry! Let's explore the groundbreaking work of Dr. Marti Olsen Laney on neurotransmitters!"),
+        ("Tonu", "Extroverts thrive on the neurotransmitter 'Dopamine'! Extroverts have a less sensitive dopamine reward network, which means they need lots of external stimulation—loud music, bustling crowds, high risk, and constant social banter—to feel energized!"),
+        ("Solu", "Without that high stimulation, extroverts quickly feel bored, restless, and depleted!"),
+        ("Tonu", "Introverts, however, have brains that are extremely sensitive to dopamine! High doses of sensory input overwhelm their neural circuits and make them feel flooded and anxious!"),
+        ("Solu", "Instead of dopamine, introverts thrive on a completely different neurotransmitter: 'Acetylcholine'!"),
+        ("Tonu", "Acetylcholine is the chemical of quiet contemplation, deep focus, internal reflection, and tranquility! When an introvert reads a book, works on a complex code or writing project, or has a deep conversation with one close friend, acetylcholine flows, making them feel profoundly fulfilled and centered!"),
+
+        # SECTION 3: HANS EYSENCK & THE RETICULAR ACTIVATING SYSTEM (RAS)
+        ("Solu", "Let's also look at the legendary work of psychologist Hans Eysenck and the brain structure known as the 'Reticular Activating System', or RAS!"),
+        ("Tonu", "The Reticular Activating System sits in your brainstem and acts like a gatekeeper, controlling how much sensory information—light, noise, social chatter—enters your conscious brain!"),
+        ("Solu", "Eysenck discovered that introverts have a naturally high baseline of cortical arousal! Their brains are already buzzing with vivid internal thoughts, ideas, and sensory perception!"),
+        ("Tonu", "So when an introvert enters a noisy, crowded party with flashing lights, loud bass, and thirty people shouting over each other, their brain reaches sensory overload within forty-five minutes!"),
+        ("Solu", "Extroverts, on the other hand, have a low baseline of cortical arousal! Their brains are naturally under-stimulated, so they crave that booming party to bring their brains up to optimal alertness!"),
+        ("Tonu", "Understanding this biological reality removes all guilt and self-judgment! Leaving a party early isn't being rude; it is simply honoring your brain's biological thresholds!"),
+
+        # SECTION 4: SOLITUDE AS THE CRUCIBLE OF GENIUS
+        ("Solu", "Tonu, let's explore why solitude is so critical for monumental creative and intellectual breakthroughs!"),
+        ("Tonu", "Author Susan Cain wrote: 'Solitude matters, and for some people, it is the air they breathe.' Throughout history, the most revolutionary leaps in human progress happened not in committee meetings or brainstorming sessions, but in quiet rooms of solitary focus!"),
+        ("Solu", "Look at Sir Isaac Newton! When Cambridge University closed during the Great Plague of London, Newton retreated to his family farm in rural Woolsthorpe. In that absolute quiet and solitude, he invented calculus, unraveled the laws of universal gravitation, and mapped the optics of light!"),
+        ("Tonu", "And look at Albert Einstein! Einstein famously declared: 'The monotony and solitude of a quiet life stimulates the creative mind.' He loved spending solitary hours drifting on a small sailboat, staring at the water and imagining what it would feel like to ride along a beam of light!"),
+        ("Solu", "What about modern technology? Steve Wozniak, who single-handedly designed the first Apple I and Apple II computers, wrote in his autobiography that he never could have invented those revolutionary machines if he hadn't spent thousands of uninterrupted, solitary nights alone in his bedroom tinkering with circuit boards!"),
+        ("Tonu", "And J.K. Rowling dreamed up the entire universe of Harry Potter while sitting quietly by herself on a delayed, four-hour train journey from Manchester to London!"),
+        ("Solu", "When you remove the social pressure to perform and conform, your mind has the freedom to explore wild, original neural associations! Solitude is the crucible of creative genius."),
+
+        # SECTION 5: ADAM GRANT'S WHARTON STUDY ON INTROVERTED LEADERS
+        ("Tonu", "Now, let's address leadership! In modern corporate culture, recruiters and boards of directors almost always hire extroverts for executive leadership roles, assuming they make the best managers."),
+        ("Solu", "But organizational psychologist Dr. Adam Grant from the Wharton School of Business conducted a landmark study that shocked the business world!"),
+        ("Tonu", "What did Dr. Grant discover in his research, Solu?"),
+        ("Solu", "He analyzed dozens of retail franchises and corporate teams and found that when a team is made up of proactive, highly motivated employees who propose innovative ideas, introverted leaders actually produce significantly higher profits and performance than extroverted leaders!"),
+        ("Tonu", "Why is that? That is fascinating!"),
+        ("Solu", "Because extroverted leaders love the limelight and often feel threatened or annoyed by proactive employees who bring new ideas. Extroverted leaders want everyone to follow their own vision!"),
+        ("Tonu", "Whereas an introverted leader has no ego desire to hog the spotlight! They listen deeply, process employee suggestions carefully, and empower their team members to run with their creative initiatives!"),
+        ("Solu", "Introverted leaders create psychological safety because they don't dominate the room. They ask thoughtful questions and give credit to their teams!"),
+        ("Tonu", "Think of legendary leaders like Abraham Lincoln, Eleanor Roosevelt, Rosa Parks, Bill Gates, and Warren Buffett—calm, measured, analytical, and deeply impactful."),
+
+        # SECTION 6: THE SOCIAL BATTERY & STRATEGIC RECHARGING
+        ("Solu", "Let's talk about the concept of the 'Social Battery'! This is a metaphor that millions of our listeners will instantly relate to!"),
+        ("Tonu", "Imagine you wake up in the morning with your phone at one hundred percent battery! For an introvert, every social interaction drains a percentage of that battery!"),
+        ("Solu", "A thirty-minute team meeting takes fifteen percent. Answering unexpected phone calls takes another twenty percent. Having small talk in the kitchen with coworkers takes ten percent!"),
+        ("Tonu", "By 5 PM, your social battery is flashing red at four percent! If someone asks: 'Hey, do you want to go to a busy sports bar for happy hour?', your brain screams in agony!"),
+        ("Solu", "An extrovert's battery is the opposite: they start the day at twenty percent, and every social conversation charges their battery up! By 5 PM, they are at ninety percent and ready to party until midnight!"),
+        ("Tonu", "How do introverts protect their social battery, Solu?"),
+        ("Solu", "Through what psychologists call 'Strategic Energy Pacing'! Do not schedule back-to-back social events on the weekend. If you have a wedding reception on Saturday afternoon, keep Sunday completely clear for quiet rejuvenation!"),
+        ("Tonu", "Build micro-restoration niches during your workday! Take a solo ten-minute walk in a quiet park during lunch, put on noise-canceling headphones, or sit in your car in silence between appointments to recharge your battery!"),
+
+        # SECTION 7: SURVIVING OPEN-PLAN OFFICES & THE GROUPTHINK TRAP
+        ("Solu", "Let's talk about one of the most toxic inventions for introverted professionals: the modern open-plan office!"),
+        ("Tonu", "Open-plan offices were sold as collaborative wonderlands, but studies show they destroy focus, elevate stress hormones, and increase employee sick days by sixty-two percent!"),
+        ("Solu", "For an introvert whose brain is hyper-responsive to auditory stimuli, having twenty people talking on speakerphones, typing loudly, and constantly tapping your shoulder creates relentless sensory torture!"),
+        ("Tonu", "And it encourages what sociologists call 'Groupthink'—where the loudest, most aggressive person in the meeting dictates the company strategy, even if their idea is completely flawed, simply because quieter team members don't want to get into a shouting match!"),
+        ("Solu", "How can an introverted professional excel in meetings, Tonu?"),
+        ("Tonu", "Use what Susan Cain calls 'The Advance Preparation Strategy'! Read the meeting agenda the night before. Write down two or three profound, data-backed insights or questions in advance!"),
+        ("Solu", "And speak up early in the first ten minutes of the meeting! You don't have to talk for twenty minutes; make one brilliant, well-crafted comment early on. That establishes your intellectual authority in the room, and then you can listen and observe comfortably!"),
+        ("Tonu", "And if the discussion moves too fast, send a follow-up email after the meeting: 'I've been thinking deeply about the discussion regarding client acquisition, and here is a structured proposal...' Your written communication is your superpower!"),
+
+        # SECTION 8: NETWORKING FOR INTROVERTS: QUALITY OVER QUANTITY
+        ("Solu", "Now let's tackle a word that makes most introverts want to crawl under a rock: 'Networking'!"),
+        ("Tonu", "Traditional networking events are horrifying: standing in a hotel banquet room holding a lukewarm drink, handing out twenty cheap business cards, and having shallow two-minute conversations about the weather with strangers!"),
+        ("Solu", "That is not networking; that is transactional speed-dating! And introverts despise superficial small talk!"),
+        ("Tonu", "Introverts crave depth, substance, authenticity, and intellectual resonance! How should introverts build a powerful professional network?"),
+        ("Solu", "Focus on depth over breadth! You don't need fifty shallow acquaintances; you need five or six high-trust, authentic relationships!"),
+        ("Tonu", "Instead of attending a crowded mixer, invite one inspiring professional for a quiet, one-on-one coffee or a thirty-minute video call!"),
+        ("Solu", "Ask deep, engaging questions: 'What was the biggest turning point in your career?' or 'What is an exciting project you are currently pouring your heart into?'"),
+        ("Tonu", "Because introverts are world-class listeners, people will walk away from a one-on-one conversation thinking: 'Wow, that was the most thoughtful person I have spoken to all month!' That is how genuine opportunities and mentorships are born."),
+
+        # SECTION 9: THE ART OF SPEAKING SLOWLY & DELIBERATELY
+        ("Solu", "Let's explore the vocal dynamics of introverted speech! In a culture that equates rapid-fire talking with confidence, introverts often feel pressured to speak fast."),
+        ("Tonu", "And when you rush your words, your pitch rises, your breath gets shallow, and you can stumble over your sentences!"),
+        ("Solu", "Embrace the power of the pregnant pause! Great thinkers and powerful orators never rush!"),
+        ("Tonu", "When someone asks you a question in an interview or meeting, don't rush to fill the silence within half a second!"),
+        ("Solu", "Take a calm, deep belly breath. Look them in the eye. Pause for two full seconds. Then say: 'That is a thought-provoking question. Let's look at the underlying factors.'"),
+        ("Tonu", "That brief pause projects immense gravitas, intellectual self-control, and unshakeable inner authority! It signals that you don't speak just to make noise; you speak because what you have to say has real weight!"),
+
+        # SECTION 10: HONORING YOUR SENSITIVITY & INNER LANDSCAPE
+        ("Solu", "Many introverts also fall into the category of 'Highly Sensitive People', or HSPs, a concept pioneered by Dr. Elaine Aron."),
+        ("Tonu", "Highly sensitive people process sensory and emotional information deeply. They are profoundly moved by beautiful music, art, poetry, and nature, and they can feel the unspoken emotional energy in a room within five seconds of walking in!"),
+        ("Solu", "If you are highly sensitive, for years you may have been told: 'You are too sensitive! Stop taking things so personally!'"),
+        ("Tonu", "Never apologize for your sensitivity! In a world that is becoming increasingly coarse, hurried, and numb, your sensitivity is your moral compass and your artistic heartbeat!"),
+        ("Solu", "It gives you extraordinary empathy, the ability to anticipate other people's needs before they speak, and an eye for subtle details that other people completely miss!"),
+        ("Tonu", "When you learn to honor your sensitivity instead of fighting against it, you stop feeling like a fragile outsider and start recognizing that your empathy is a superpower that heals fractured environments."),
+        ("Solu", "Protect your inner garden, surround yourself with gentle, uplifting people, and let your sensitivity be your light!"),
+
+        # SECTION 11: THE AMBIVERT SPECTRUM & SITUATIONAL FLEXIBILITY
+        ("Solu", "Now, let's explore an important nuance: what if you don't feel like a pure introvert or a pure extrovert?"),
+        ("Tonu", "Renowned Swiss psychiatrist Carl Jung, who originally coined the terms 'introvert' and 'extrovert' in 1921, famously said: 'There is no such thing as a pure introvert or a pure extrovert. Such a person would be in the lunatic asylum!'"),
+        ("Solu", "Most human beings fall somewhere along a spectrum, and psychologists call people in the middle 'Ambiverts'!"),
+        ("Tonu", "An ambivert can be warm, sociable, and talkative at a dinner party on Friday night, but desperately craves reading alone on the couch all day Saturday and Sunday!"),
+        ("Solu", "Ambiverts possess incredible situational flexibility! They know how to speak up when action is required, but they also know how to step back and listen when empathy is needed."),
+        ("Tonu", "And Dr. Adam Grant found in his research that ambiverts often make the highest-performing sales professionals, precisely because they strike the perfect balance between asserting their product and deeply listening to the customer's actual pain points!"),
+        ("Solu", "Whether you are a deep introvert or a balanced ambivert, honoring your internal energy state is the secret to thriving without burnout."),
+
+        # SECTION 12: THE WRITTEN WORD: WHY INTROVERTS DOMINATE IN WRITING
+        ("Tonu", "Let's also look at why introverts frequently excel at written communication, essays, journalism, and storytelling!"),
+        ("Solu", "In speech, thoughts have to be produced instantaneously in real-time, which favors fast talkers. But in writing, thoughts have time to marinate, mature, and crystallize!"),
+        ("Tonu", "Introverts often say: 'I don't know what I think until I write it down!' Through journaling, long-form essays, thoughtful emails, or poetry, introverts translate their complex internal architecture into elegant prose."),
+        ("Solu", "Think of legendary figures like Keanu Reeves, Hayao Miyazaki of Studio Ghibli, or author Haruki Murakami! Murakami runs ten kilometers every morning in absolute solitude and writes for five hours before speaking to anyone!"),
+        ("Tonu", "That disciplined solitude produces universally beloved art that touches millions of souls across the globe!"),
+        ("Solu", "If you ever feel hesitant to speak impromptu in public, remember that your capacity for deep contemplation gives your written and prepared words unmatched clarity and power!"),
+
+        # SECTION 13: LIVE ROLEPLAY: DECLINING A SOCIAL INVITATION GRACEFULLY
+        ("Solu", "Now let's provide our listeners with a practical, scripted roleplay! Imagine a friend invites you to a loud party on Friday evening, but your social battery is at two percent and you desperately need a quiet night at home."),
+        ("Tonu", "Many introverts make up elaborate lies: 'Oh, my stomach hurts, I think I have a fever!' because they feel ashamed to admit they just want to be alone!"),
+        ("Solu", "Let's show how to decline with total authenticity, warmth, and confidence! Tonu, how would you invite me?"),
+        ("Tonu", "Hey Solu! A bunch of us are going to that new rooftop club tonight with loud DJ music and lots of people! You have to come with us!"),
+        ("Solu", "Here is how you reply with grace and boundary: 'That sounds like an absolute blast, Tonu! Thank you so much for thinking of me! Honestly, after a really intense work week, my social battery is completely empty, so I am dedicating tonight to a quiet book and early rest. But I would love to grab a quiet coffee with you one-on-one next Tuesday afternoon to catch up! Have an amazing time tonight!'"),
+        ("Tonu", "Notice how magnificent that is! You celebrated their plan, expressed gratitude, stated your need for rest without apology, and proposed a concrete one-on-one alternative!"),
+        ("Solu", "No guilt, no awkward excuses, and your friendship remains completely solid!"),
+
+        # SECTION 14: NURTURING INTROVERTED CHILDREN IN A NOISY WORLD
+        ("Tonu", "Let's also speak to the parents, teachers, and mentors listening to our show today! How do we nurture quiet, introverted children?"),
+        ("Solu", "In modern schools, teachers often write on report cards: 'Needs to participate more' or 'Too quiet in group activities', treating a child's natural introspective nature as a developmental deficiency!"),
+        ("Tonu", "That can inflict deep wounds of inadequacy on a young mind! A quiet child who loves reading in a corner, drawing intricate sketches, or observing nature is not broken; they are cultivating deep focus and analytical thinking!"),
+        ("Solu", "Instead of forcing an introverted child into high-stimulation environments like noisy soccer leagues with fifty screaming spectators, introduce them to activities where individual mastery shines—like swimming, martial arts, playing an instrument, or chess!"),
+        ("Tonu", "And never call them 'shy' in public! Saying 'Oh, she is just shy' labels the child and teaches them to feel ashamed of their natural caution!"),
+        ("Solu", "Instead, say: 'She likes to take her time to observe and get comfortable before jumping in.' That frames their behavior as wise discernment rather than fearful hesitation!"),
+        ("Tonu", "Give children quiet sanctuaries at home where they can recharge without screens or demands, and watch their inner confidence flourish!"),
+
+        # SECTION 15: VOCABULARY & IDIOM SPOTLIGHT (6 KEY IDIOMS)
+        ("Tonu", "Now, let's step into our signature segment: Key Everyday English Idioms and Phrases! Today, we have selected six colorful, essential expressions about personality, social dynamics, and quiet confidence!"),
+        ("Solu", "Let's master them together! Tonu, what is our very first idiom for today?"),
+        ("Tonu", "Our first expression is 'keep to oneself'. To 'keep to oneself' means to live quietly and privately, preferring solitude and avoiding excessive socializing with others."),
+        ("Solu", "Let's listen to a natural conversational example: 'Although Liam worked at the company for five years, he was a reserved engineer who generally kept to himself.'"),
+        ("Tonu", "Perfect! What is our second expression, Solu?"),
+        ("Solu", "Our second expression is essential for modern self-care: 'recharge one's batteries'. To 'recharge your batteries' means to rest and recover your physical, mental, or emotional energy after a period of exertion or social interaction."),
+        ("Tonu", "Here is how you can use it: 'After three days of leading client workshops, Maya spent the entire Sunday hiking alone in the forest to recharge her batteries.'"),
+        ("Solu", "Nature is the ultimate recharger! Tonu, introduce our third expression."),
+        ("Tonu", "Our third expression describes personal growth: 'come out of one's shell'. To 'come out of your shell' means to become more confident, expressive, and comfortable talking and interacting with others after being quiet or reserved."),
+        ("Solu", "Let's hear an example: 'Joining the university debate club helped Daniel come out of his shell and discover his true public speaking voice.'"),
+        ("Tonu", "Wonderful! And what is our fourth expression, Solu?"),
+        ("Solu", "Our fourth expression describes deep emotional intelligence: 'read between the lines'. To 'read between the lines' means to understand the hidden, unspoken meaning, feelings, or intentions behind what someone says or writes."),
+        ("Tonu", "For example: 'He said he was fine with the schedule change, but reading between the lines of his email, I could tell he was quite frustrated.'"),
+        ("Solu", "Introverts excel at reading between the lines! Tonu, take us to our fifth idiom."),
+        ("Tonu", "Our fifth expression is a timeless proverb: 'still waters run deep'. 'Still waters run deep' means that quiet, calm, or reserved people often possess great passion, intellect, emotional depth, and hidden talents."),
+        ("Solu", "Here is an inspiring example: 'Don't underestimate Clara just because she speaks softly in board meetings; still waters run deep, and her strategic analysis is brilliant.'"),
+        ("Tonu", "And what is our sixth and final expression for today, Solu?"),
+        ("Solu", "Our sixth expression is 'steal the spotlight' or 'be in the spotlight'. To 'be in the spotlight' means to be the center of public attention, admiration, or scrutiny."),
+        ("Tonu", "Let's hear an example: 'While the lead singer loved being in the spotlight, the talented songwriter preferred staying backstage and crafting the melodies in peace.'"),
+
+        # SECTION 13: INTERACTIVE SPEAKING PRACTICE
+        ("Solu", "Now, it is time for our Interactive Speaking Challenge! This is your turn to speak English out loud along with us. Stand tall, relax your jaw, open your throat, and repeat each sentence with steady confidence and clear pronunciation!"),
+        ("Tonu", "Sentence number one: 'Quiet reflection is not weakness; it is the breeding ground of creativity and wisdom.' Your turn!"),
+        ("Solu", "Speak it out loud with clear cadence: 'Quiet reflection is not weakness; it is the breeding ground of creativity and wisdom.'"),
+        ("Tonu", "Beautiful rhythm! Sentence number two: 'Never underestimate a quiet person, because still waters run deep.' Your turn!"),
+        ("Solu", "Repeat with natural English melody: 'Never underestimate a quiet person, because still waters run deep.'"),
+        ("Tonu", "Fantastic! Sentence number three: 'Taking time alone to recharge your batteries is essential for long-term health and focus.' Your turn!"),
+        ("Solu", "Say it clearly: 'Taking time alone to recharge your batteries is essential for long-term health and focus.'"),
+        ("Tonu", "Sentence number four: 'When you embrace your quiet strengths, you bring unique brilliance to the world.' Your turn!"),
+        ("Solu", "Let's say sentence number four together: 'When you embrace your quiet strengths, you bring unique brilliance to the world.'"),
+        ("Tonu", "Outstanding work! Your spoken English is becoming clearer, more resonant, and filled with authentic presence!"),
+
+        # SECTION 14: REFLECTION & FAREWELL
+        ("Solu", "And now, it is time for today's Weekly Reflection Question! We want you to practice writing in English down in the comment section below."),
+        ("Tonu", "Here is today's question: 'Do you consider yourself an introvert, an extrovert, or an ambivert who enjoys a mix of both? What is your favorite way to recharge your energy after a busy, crowded day?'"),
+        ("Solu", "Writing your personal stories in English accelerates your fluency and helps you connect with fellow learners from every corner of the world. Share your thoughts below!"),
+        ("Tonu", "Solu and I read through every single comment, and we are so inspired by your courage and dedication to self-improvement."),
+        ("Solu", "Remember that in a world of endless noise, your quiet presence, deep listening, and thoughtful words are priceless gifts."),
+        ("Tonu", "Celebrate who you are, honor your natural rhythm, and keep speaking English with confidence and joy!"),
+        ("Solu", "Until next time, goodbye from Solu!"),
+        ("Tonu", "And goodbye from Tonu!"),
+        ("Both", "Happy learning, shine your quiet light, and goodbye!")
+    ]
+    return turns
+
+if __name__ == "__main__":
+    t = build_ep36()
+    gen_common.verify_and_save(36, "scripts/daily_speak_ep36_full.txt",
+                              "The Power of Introverts in an Extroverted World",
+                              "Daily Speak English | English Listening & Speaking Practice",
+                              t)
