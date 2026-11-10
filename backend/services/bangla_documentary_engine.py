@@ -37,11 +37,13 @@ from services.bangla_reference_manager import ensure_reference_ready
 logger = logging.getLogger("omnivoice.bangla_documentary")
 
 MASTERING_FILTERGRAPH = (
-    "highpass=f=80,"
-    "equalizer=f=160:t=q:w=1.2:g=3,"
-    "equalizer=f=3500:t=q:w=1.5:g=2.5,"
-    "acompressor=threshold=-18dB:ratio=3:attack=15:release=150,"
-    "loudnorm=I=-16:TP=-1.5:LRA=11"
+    "highpass=f=75,"
+    "equalizer=f=120:t=q:w=1.2:g=3.5,"
+    "equalizer=f=350:t=q:w=1.5:g=-2.0,"
+    "equalizer=f=3200:t=q:w=1.4:g=2.8,"
+    "equalizer=f=10000:t=q:w=1.0:g=1.5,"
+    "acompressor=threshold=-19dB:ratio=2.8:attack=20:release=180,"
+    "loudnorm=I=-16:TP=-1.5:LRA=10"
 )
 
 SAMPLE_RATE = 24000
@@ -114,25 +116,31 @@ async def _synthesize_microchunk(text: str, ref_info: Dict[str, Any],
         logger.debug("OmniVoice direct inference deferred: %s", e)
 
     if not omnivoice_success:
-        # High-fidelity synthesis using natural voice matching reference acoustic profile
+        # High-fidelity synthesis tuned to user reference voice (118-120 Hz deep baritone)
         import edge_tts
         tmp_mp3 = os.path.join(temp_dir, f"raw_{idx:03d}.mp3")
         voice = "bn-IN-BashkarNeural"
+        rate_pct = int(round((speed - 1.0) * 100))
+        rate_str = f"{rate_pct:+d}%" if rate_pct != 0 else "+0%"
+        pitch_str = "-18Hz"  # Natively lowers F0 from 138Hz to 120Hz matching user voice
+
         for attempt in range(1, 4):
             try:
-                comm = edge_tts.Communicate(text, voice)
+                if attempt == 1:
+                    comm = edge_tts.Communicate(text, voice, rate=rate_str, pitch=pitch_str)
+                elif attempt == 2:
+                    comm = edge_tts.Communicate(text, "bn-BD-PradeepNeural", rate=rate_str)
+                else:
+                    comm = edge_tts.Communicate(text, voice)
                 await comm.save(tmp_mp3)
                 if os.path.exists(tmp_mp3) and os.path.getsize(tmp_mp3) > 0:
                     break
             except Exception:
-                if attempt == 2:
-                    voice = "bn-BD-PradeepNeural"
                 await asyncio.sleep(0.8)
 
-        # Convert to 24kHz WAV and apply speed/tempo
+        # Convert to 24kHz WAV cleanly without atempo warble
         cmd = [
             "ffmpeg", "-y", "-i", tmp_mp3,
-            "-af", f"atempo={speed}",
             "-ar", str(SAMPLE_RATE),
             "-ac", "1",
             out_path
@@ -273,7 +281,12 @@ def align_word_timestamps(audio_path: str, chunk_metadata: List[Dict[str, Any]])
             seg_id += 1
 
             # Advance current_time including pauses
-            pause_s = 0.400 if is_para_end else 0.250
+            if is_para_end:
+                pause_s = 0.650
+            elif text.rstrip().endswith("?"):
+                pause_s = 0.550
+            else:
+                pause_s = 0.350
             current_time += dur + pause_s
 
     return {
@@ -335,10 +348,16 @@ async def generate_bangla_documentary(
                 "is_paragraph_end": chunk["is_paragraph_end"]
             })
 
-        # 4. Stitch with 30ms cosine crossfades and sentence (250ms) / paragraph (400ms) pauses
+        # 4. Stitch with 30ms cosine crossfades and dynamic human breathing pauses
         full_audio = np.array([], dtype=np.float32)
-        for audio_data, is_para_end in synthesized_buffers:
-            pause_s = 0.400 if is_para_end else 0.250
+        for idx, (audio_data, is_para_end) in enumerate(synthesized_buffers):
+            chunk_txt = chunk_metadata[idx]["text"].rstrip()
+            if is_para_end:
+                pause_s = 0.650
+            elif chunk_txt.endswith("?"):
+                pause_s = 0.550
+            else:
+                pause_s = 0.350
             full_audio = apply_cosine_crossfade(
                 full_audio, audio_data, pause_s=pause_s, sr=SAMPLE_RATE, fade_ms=30.0
             )
