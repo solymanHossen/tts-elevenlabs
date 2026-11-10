@@ -1,0 +1,21 @@
+{
+  "id": "bengali_main_voice",
+  "name": "Bengali Main Voice (ডকুমেন্টারি মেইন ভয়েস)",
+  "ref_audio_path": "bengali_main_voice.wav",
+  "ref_text": "একটি ছোট্ট কাচের বোতল। ভেতরে কালচে রঙের এক অদ্ভুত পানীয়। অথচ আজ সেই পানীয়ের নাম শুনলেই পৃথিবীর প্রায় প্রতিটি প্রান্তের মানুষ চিনে ফেলে একটি ব্র্যান্ডকে। কোকা-কোলা।",
+  "instruct": "Deep, warm baritone documentary narration voice with cinematic pacing and clear articulation",
+  "language": "Bengali",
+  "locked_audio_path": "bengali_main_voice.wav",
+  "seed": 42,
+  "is_locked": 1,
+  "personality": "narrator",
+  "description": "Main official Bengali narrator voice with warm baritone cinematic tone and documentary presence.",
+  "is_demo": 0,
+  "verified_own_voice": 1,
+  "consent_text": "I hereby register this voice as my primary Bengali production voice profile.",
+  "consent_audio_path": "bengali_main_voice.wav",
+  "consent_recorded_at": 1794304769.665071,
+  "kind": "clone",
+  "created_at": 1794304769.6650712,
+  "consent_basis": "user_authorized"
+}
